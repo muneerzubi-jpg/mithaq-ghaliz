@@ -16,15 +16,14 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
 .screen.active{display:flex}
 .screen-scroll{flex:1;overflow-y:auto;padding-bottom:100px;background:var(--ivory);-webkit-overflow-scrolling:touch}
 
-/* ═══ الهيدر المُصلح - الحل الجذري ═══ */
-.header{background:var(--grad-hero);padding:16px 16px 12px;display:flex;align-items:center;justify-content:space-between;border-bottom:var(--border-gold);min-height:64px;flex-shrink:0;gap:8px}
-.header h1{font-size:18px;font-weight:800;color:var(--gold-bright);margin:0;white-space:nowrap}
-.header-actions{display:flex;align-items:center;gap:8px;flex-shrink:0}
-.header-btn{width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,0.1);border:1px solid var(--gold);cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--gold-bright);font-size:18px;flex-shrink:0;touch-action:manipulation;-webkit-tap-highlight-color:rgba(255,255,255,0.2);position:relative}
+/* ═══ الهيدر الأصلي - العودة للتصميم الذي كان يعمل ═══ */
+.header{background:var(--grad-hero);padding:20px 24px 16px;display:flex;align-items:center;gap:12px;border-bottom:var(--border-gold);min-height:68px;flex-shrink:0}
+.header h1{font-size:20px;font-weight:800;flex:1;color:var(--gold-bright)}
+.header-btn{width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,0.1);border:1px solid var(--gold);cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--gold-bright);font-size:18px;transition:all 0.2s;touch-action:manipulation;-webkit-tap-highlight-color:rgba(255,255,255,0.2)}
 .header-btn:active{transform:scale(0.92);background:rgba(255,255,255,0.2)}
-.header-btn svg{pointer-events:none;width:18px;height:18px}
+.header-btn svg{pointer-events:none;width:20px;height:20px}
 
-.content{padding:24px 20px}
+.content{padding:28px 24px}
 .btn{display:flex;align-items:center;justify-content:center;padding:16px 28px;border-radius:var(--radius-lg);font-size:16px;font-weight:700;font-family:inherit;border:none;cursor:pointer;width:100%;transition:all 0.3s}
 .btn:active{transform:scale(0.97)}
 .btn-primary{background:var(--grad-emerald);color:#fff;box-shadow:var(--shadow-md);border:2px solid var(--gold)}
@@ -47,167 +46,167 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
 .nav-btn.active span{opacity:1;transform:translateY(0)}
 .nav-btn .badge{position:absolute;top:0;right:50%;margin-right:-18px;background:var(--error);color:#fff;font-size:9px;font-weight:900;min-width:16px;height:16px;border-radius:8px;display:flex;align-items:center;justify-content:center;border:2px solid #083828;animation:badgePulse 1s ease infinite}
 @keyframes badgePulse{0%,100%{transform:scale(1)}50%{transform:scale(1.2)}}
-.toast{position:fixed;bottom:120px;left:50%;transform:translateX(-50%) translateY(80px);background:var(--grad-emerald);color:#fff;padding:14px 28px;border-radius:var(--radius-full);font-size:14px;font-weight:700;opacity:0;transition:all 0.4s;z-index:9999;border:2px solid var(--gold);max-width:90%;text-align:center}
+.toast{position:fixed;bottom:120px;left:50%;transform:translateX(-50%) translateY(80px);background:var(--grad-emerald);color:#fff;padding:14px 28px;border-radius:var(--radius-full);font-size:14px;font-weight:700;opacity:0;transition:all 0.4s;z-index:9999;border:2px solid var(--gold)}
 .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
 .splash{background:var(--grad-hero);color:#fff;align-items:center;justify-content:center;text-align:center;padding:40px;position:relative;overflow:hidden}
 .splash::before{content:'';position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cg fill='none' stroke='%23D4B87A' stroke-width='1.5' opacity='0.3'%3E%3Cpath d='M60 0 L120 60 L60 120 L0 60 Z'/%3E%3Cpath d='M60 20 L100 60 L60 100 L20 60 Z'/%3E%3Ccircle cx='60' cy='60' r='20'/%3E%3C/g%3E%3C/svg%3E");background-size:120px 120px}
 .splash-logo{width:140px;height:140px;background-image:url('https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=400&q=80');background-size:cover;background-position:center;border-radius:40px;display:flex;align-items:center;justify-content:center;margin-bottom:32px;box-shadow:0 20px 60px rgba(0,0,0,0.6),0 0 0 3px rgba(212,184,122,0.3);position:relative;border:none;z-index:1;overflow:hidden}
 .splash-logo svg{display:none}
-.splash h1{font-family:'Amiri',serif;font-size:36px;font-weight:700;margin-bottom:12px;color:var(--gold-bright);z-index:1}
-.splash .splash-subtitle{font-size:16px;margin-bottom:40px;color:#fff;z-index:1}
+.splash h1{font-family:'Amiri',serif;font-size:40px;font-weight:700;margin-bottom:12px;color:var(--gold-bright);z-index:1}
+.splash .splash-subtitle{font-size:18px;margin-bottom:48px;color:#fff;z-index:1}
 .splash .btn{max-width:280px;z-index:1}
-.welcome-card{background:var(--grad-hero);color:#fff;padding:24px;border-radius:var(--radius-xl);margin-bottom:20px;position:relative;overflow:hidden;box-shadow:var(--shadow-md);border:3px solid var(--gold)}
+.welcome-card{background:var(--grad-hero);color:#fff;padding:28px;border-radius:var(--radius-xl);margin-bottom:24px;position:relative;overflow:hidden;box-shadow:var(--shadow-md);border:3px solid var(--gold)}
 .welcome-card::before{content:'';position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill='none' stroke='%23D4B87A' stroke-width='1' opacity='0.25'%3E%3Cpath d='M50 0 L100 50 L50 100 L0 50 Z'/%3E%3Ccircle cx='50' cy='50' r='15'/%3E%3C/g%3E%3C/svg%3E");background-size:100px 100px}
 .welcome-card *{position:relative;z-index:1}
-.welcome-card h2{font-family:'Amiri',serif;font-size:22px;font-weight:700;margin-bottom:6px;color:var(--gold-bright)}
-.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:24px}
-.stat{background:var(--cream);padding:16px 10px;border-radius:var(--radius-xl);text-align:center;box-shadow:var(--shadow-md);border:var(--border-gold)}
-.stat-n{font-size:26px;font-weight:900;color:var(--emerald)}
-.stat-l{font-size:11px;color:var(--text-sec);margin-top:4px;font-weight:600}
-.section-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}
-.section-head h3{font-size:17px;font-weight:800;color:var(--emerald)}
-.section-head a{font-size:13px;color:var(--gold-bright);text-decoration:none;font-weight:700;border-bottom:2px solid var(--gold);padding-bottom:2px}
-.p-card{background:var(--cream);border-radius:var(--radius-xl);padding:14px;margin-bottom:10px;display:flex;gap:12px;align-items:center;box-shadow:var(--shadow-md);cursor:pointer;border:var(--border-gold);touch-action:manipulation}
-.p-avatar{width:60px;height:60px;border-radius:50%;background:var(--grad-emerald);display:flex;align-items:center;justify-content:center;color:var(--gold-bright);font-size:22px;font-weight:900;flex-shrink:0;position:relative;border:3px solid var(--gold)}
-.p-verified{position:absolute;bottom:0;right:0;background:var(--grad-gold);color:var(--emerald-deep);width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;border:2px solid var(--surface);font-weight:900}
+.welcome-card h2{font-family:'Amiri',serif;font-size:24px;font-weight:700;margin-bottom:6px;color:var(--gold-bright)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:28px}
+.stat{background:var(--cream);padding:18px 12px;border-radius:var(--radius-xl);text-align:center;box-shadow:var(--shadow-md);border:var(--border-gold)}
+.stat-n{font-size:28px;font-weight:900;color:var(--emerald)}
+.stat-l{font-size:12px;color:var(--text-sec);margin-top:4px;font-weight:600}
+.section-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
+.section-head h3{font-size:18px;font-weight:800;color:var(--emerald)}
+.section-head a{font-size:14px;color:var(--gold-bright);text-decoration:none;font-weight:700;border-bottom:2px solid var(--gold);padding-bottom:2px}
+.p-card{background:var(--cream);border-radius:var(--radius-xl);padding:16px;margin-bottom:12px;display:flex;gap:14px;align-items:center;box-shadow:var(--shadow-md);cursor:pointer;border:var(--border-gold)}
+.p-avatar{width:64px;height:64px;border-radius:50%;background:var(--grad-emerald);display:flex;align-items:center;justify-content:center;color:var(--gold-bright);font-size:24px;font-weight:900;flex-shrink:0;position:relative;border:3px solid var(--gold)}
+.p-verified{position:absolute;bottom:0;right:0;background:var(--grad-gold);color:var(--emerald-deep);width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;border:2px solid var(--surface);font-weight:900}
 .p-info{flex:1;min-width:0}
-.p-name{font-size:16px;font-weight:800;margin-bottom:3px}
-.p-meta{font-size:12px;color:var(--text-sec);margin-bottom:6px}
-.p-badge{display:inline-block;background:var(--grad-gold);color:var(--emerald-deep);padding:4px 10px;border-radius:var(--radius-full);font-size:11px;font-weight:800;border:1px solid var(--gold-bright)}
-.setting-item{display:flex;align-items:center;gap:14px;padding:14px 0;border-bottom:1px solid var(--border-gold);cursor:pointer;touch-action:manipulation}
-.setting-icon{width:40px;height:40px;border-radius:12px;background:var(--cream-warm);display:flex;align-items:center;justify-content:center;font-size:17px;border:1px solid var(--gold)}
+.p-name{font-size:17px;font-weight:800;margin-bottom:4px}
+.p-meta{font-size:13px;color:var(--text-sec);margin-bottom:8px}
+.p-badge{display:inline-block;background:var(--grad-gold);color:var(--emerald-deep);padding:5px 12px;border-radius:var(--radius-full);font-size:12px;font-weight:800;border:1px solid var(--gold-bright)}
+.setting-item{display:flex;align-items:center;gap:14px;padding:16px 0;border-bottom:1px solid var(--border-gold);cursor:pointer}
+.setting-icon{width:42px;height:42px;border-radius:14px;background:var(--cream-warm);display:flex;align-items:center;justify-content:center;font-size:18px;border:1px solid var(--gold)}
 .setting-text{flex:1}
-.setting-text h4{font-size:14px;font-weight:700}
-.setting-text p{font-size:12px;color:var(--text-sec)}
+.setting-text h4{font-size:15px;font-weight:700}
+.setting-text p{font-size:13px;color:var(--text-sec)}
 .setting-arrow{color:var(--gold);font-size:16px;font-weight:900}
-.section-title{font-size:13px;color:var(--emerald);margin:18px 0 10px;font-weight:800;border-right:3px solid var(--gold);padding-right:10px}
+.section-title{font-size:14px;color:var(--emerald);margin:20px 0 12px;font-weight:800;border-right:3px solid var(--gold);padding-right:10px}
 .modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.65);backdrop-filter:blur(10px);display:none;align-items:flex-end;justify-content:center;z-index:9998}
 .modal-overlay.active{display:flex}
 .modal{background:var(--ivory);border-radius:var(--radius-xl) var(--radius-xl) 0 0;max-width:430px;width:100%;max-height:90vh;overflow-y:auto;border-top:4px solid var(--gold);box-shadow:0 -10px 60px rgba(0,0,0,0.4);animation:slideUp 0.4s cubic-bezier(0.4,0,0.2,1)}
 @keyframes slideUp{from{transform:translateY(100%)}to{transform:translateY(0)}}
 .modal-handle{width:40px;height:5px;background:var(--cream-warm);border-radius:3px;margin:12px auto 0}
-.modal-header{padding:18px 20px 14px;display:flex;align-items:center;justify-content:space-between;border-bottom:var(--border-gold)}
-.modal-header h2{font-size:18px;font-weight:800;color:var(--emerald)}
-.modal-close{width:34px;height:34px;border-radius:50%;background:var(--cream-warm);border:1px solid var(--gold);color:var(--emerald);font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;touch-action:manipulation}
-.modal-body{padding:20px}
-.modal-footer{padding:0 20px 20px;display:flex;gap:10px}
+.modal-header{padding:20px 24px 16px;display:flex;align-items:center;justify-content:space-between;border-bottom:var(--border-gold)}
+.modal-header h2{font-size:20px;font-weight:800;color:var(--emerald)}
+.modal-close{width:36px;height:36px;border-radius:50%;background:var(--cream-warm);border:1px solid var(--gold);color:var(--emerald);font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.modal-body{padding:24px}
+.modal-footer{padding:0 24px 24px;display:flex;gap:10px}
 .modal-footer .btn{flex:1}
-.pay-method{display:flex;align-items:center;gap:14px;padding:14px;background:var(--cream);border:2px solid var(--border-gold);border-radius:var(--radius-lg);margin-bottom:10px;cursor:pointer;transition:all 0.2s;touch-action:manipulation}
+.pay-method{display:flex;align-items:center;gap:14px;padding:16px;background:var(--cream);border:2px solid var(--border-gold);border-radius:var(--radius-lg);margin-bottom:10px;cursor:pointer;transition:all 0.2s}
 .pay-method:hover{border-color:var(--emerald);background:var(--surface)}
 .pay-method.selected{border-color:var(--emerald);background:var(--surface);box-shadow:0 0 0 3px rgba(14,75,58,0.1)}
-.pay-method-icon{width:46px;height:46px;border-radius:var(--radius-lg);background:var(--grad-emerald);display:flex;align-items:center;justify-content:center;font-size:22px;color:var(--gold-bright);flex-shrink:0;border:1px solid var(--gold)}
+.pay-method-icon{width:48px;height:48px;border-radius:var(--radius-lg);background:var(--grad-emerald);display:flex;align-items:center;justify-content:center;font-size:24px;color:var(--gold-bright);flex-shrink:0;border:1px solid var(--gold)}
 .pay-method-info{flex:1}
-.pay-method-info h4{font-size:14px;font-weight:700;color:var(--text);margin-bottom:2px}
-.pay-method-info p{font-size:11px;color:var(--text-sec)}
-.pay-radio{width:20px;height:20px;border-radius:50%;border:2px solid var(--gold);position:relative;flex-shrink:0}
-.pay-method.selected .pay-radio::after{content:'';position:absolute;inset:3px;background:var(--grad-gold);border-radius:50%}
-.pay-input{width:100%;padding:13px 15px;background:var(--surface);border:2px solid var(--border-gold);border-radius:var(--radius-lg);font-size:14px;font-family:inherit;color:var(--text);outline:none;text-align:right}
+.pay-method-info h4{font-size:15px;font-weight:700;color:var(--text);margin-bottom:2px}
+.pay-method-info p{font-size:12px;color:var(--text-sec)}
+.pay-radio{width:22px;height:22px;border-radius:50%;border:2px solid var(--gold);position:relative;flex-shrink:0}
+.pay-method.selected .pay-radio::after{content:'';position:absolute;inset:4px;background:var(--grad-gold);border-radius:50%}
+.pay-input{width:100%;padding:14px 16px;background:var(--surface);border:2px solid var(--border-gold);border-radius:var(--radius-lg);font-size:15px;font-family:inherit;color:var(--text);outline:none;text-align:right}
 .pay-input:focus{border-color:var(--emerald);box-shadow:0 0 0 3px rgba(14,75,58,0.1)}
 .pay-input.error{border-color:var(--error);box-shadow:0 0 0 3px rgba(198,40,40,0.1)}
 .field-error{font-size:11px;color:var(--error);margin-top:4px;font-weight:600;display:none}
 .field-error.show{display:block}
-.secure-badge{display:flex;align-items:center;gap:6px;font-size:11px;color:var(--success);font-weight:600;margin-top:12px;padding:10px;background:rgba(46,125,50,0.08);border-radius:var(--radius-lg);border:1px solid rgba(46,125,50,0.2)}
-.price-box{background:var(--cream);padding:14px;border-radius:var(--radius-lg);margin-bottom:18px;border:1px solid var(--border-gold)}
-.price-row{display:flex;justify-content:space-between;align-items:center;padding:7px 0;font-size:13px}
-.price-row.total{border-top:2px solid var(--gold);margin-top:7px;padding-top:10px;font-size:16px;font-weight:900;color:var(--emerald)}
-.trial-badge{background:var(--grad-gold);padding:14px;border-radius:var(--radius-lg);margin-bottom:18px;text-align:center;border:2px solid var(--gold-bright)}
-.trial-badge h3{font-size:17px;font-weight:900;color:var(--emerald-deep);margin-bottom:3px}
-.trial-badge p{font-size:12px;color:var(--emerald-deep);font-weight:600}
+.secure-badge{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--success);font-weight:600;margin-top:12px;padding:10px;background:rgba(46,125,50,0.08);border-radius:var(--radius-lg);border:1px solid rgba(46,125,50,0.2)}
+.price-box{background:var(--cream);padding:16px;border-radius:var(--radius-lg);margin-bottom:20px;border:1px solid var(--border-gold)}
+.price-row{display:flex;justify-content:space-between;align-items:center;padding:8px 0;font-size:14px}
+.price-row.total{border-top:2px solid var(--gold);margin-top:8px;padding-top:12px;font-size:17px;font-weight:900;color:var(--emerald)}
+.trial-badge{background:var(--grad-gold);padding:16px;border-radius:var(--radius-lg);margin-bottom:20px;text-align:center;border:2px solid var(--gold-bright)}
+.trial-badge h3{font-size:18px;font-weight:900;color:var(--emerald-deep);margin-bottom:4px}
+.trial-badge p{font-size:13px;color:var(--emerald-deep);font-weight:600}
 .processing{position:fixed;inset:0;background:rgba(0,0,0,0.7);backdrop-filter:blur(10px);display:none;align-items:center;justify-content:center;z-index:10000;flex-direction:column;gap:20px}
 .processing.active{display:flex}
-.processing-spinner{width:56px;height:56px;border:4px solid var(--cream-warm);border-top:4px solid var(--gold);border-radius:50%;animation:spin 1s linear infinite}
+.processing-spinner{width:60px;height:60px;border:4px solid var(--cream-warm);border-top:4px solid var(--gold);border-radius:50%;animation:spin 1s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
-.processing-text{color:#fff;font-size:15px;font-weight:700}
-.processing-sub{color:var(--gold-bright);font-size:12px}
-.success-content{text-align:center;padding:36px 20px}
-.success-icon{width:90px;height:90px;border-radius:50%;background:var(--grad-emerald);display:flex;align-items:center;justify-content:center;font-size:44px;margin:0 auto 18px;border:4px solid var(--gold);box-shadow:var(--shadow-md);color:var(--gold-bright)}
-.success-content h2{font-family:'Amiri',serif;font-size:24px;color:var(--emerald);margin-bottom:8px}
-.success-content p{font-size:14px;color:var(--text-sec);margin-bottom:22px;line-height:1.7}
+.processing-text{color:#fff;font-size:16px;font-weight:700}
+.processing-sub{color:var(--gold-bright);font-size:13px}
+.success-content{text-align:center;padding:40px 24px}
+.success-icon{width:100px;height:100px;border-radius:50%;background:var(--grad-emerald);display:flex;align-items:center;justify-content:center;font-size:48px;margin:0 auto 20px;border:4px solid var(--gold);box-shadow:var(--shadow-md);color:var(--gold-bright)}
+.success-content h2{font-family:'Amiri',serif;font-size:26px;color:var(--emerald);margin-bottom:8px}
+.success-content p{font-size:15px;color:var(--text-sec);margin-bottom:24px;line-height:1.7}
 .admin-overlay{position:fixed;inset:0;background:var(--ivory);z-index:10000;display:none;flex-direction:column;overflow:hidden}
 .admin-overlay.active{display:flex}
-.admin-header{background:var(--grad-hero);color:#fff;padding:18px 20px;display:flex;align-items:center;justify-content:space-between;border-bottom:var(--border-gold)}
-.admin-header h2{font-family:'Amiri',serif;font-size:20px;color:var(--gold-bright)}
-.admin-content{flex:1;overflow-y:auto;padding:20px}
-.admin-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:24px}
-.admin-stat{background:var(--surface);border-radius:var(--radius-lg);padding:16px;border:2px solid var(--border-gold);box-shadow:var(--shadow-md)}
-.admin-stat-icon{width:40px;height:40px;border-radius:12px;background:var(--grad-emerald);display:flex;align-items:center;justify-content:center;font-size:18px;color:var(--gold-bright);border:1px solid var(--gold);margin-bottom:10px}
-.admin-stat-label{font-size:11px;color:var(--text-sec);font-weight:600;margin-bottom:5px}
-.admin-stat-value{font-size:24px;font-weight:900;color:var(--emerald)}
-.admin-table{width:100%;background:var(--surface);border-radius:var(--radius-lg);overflow:hidden;border:2px solid var(--border-gold);margin-bottom:18px}
-.admin-table th{background:var(--cream);padding:12px;text-align:right;font-size:12px;font-weight:800;color:var(--emerald);border-bottom:2px solid var(--gold)}
-.admin-table td{padding:12px;border-bottom:1px solid var(--border-gold);font-size:12px}
+.admin-header{background:var(--grad-hero);color:#fff;padding:20px 24px;display:flex;align-items:center;justify-content:space-between;border-bottom:var(--border-gold)}
+.admin-header h2{font-family:'Amiri',serif;font-size:22px;color:var(--gold-bright)}
+.admin-content{flex:1;overflow-y:auto;padding:24px}
+.admin-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px;margin-bottom:28px}
+.admin-stat{background:var(--surface);border-radius:var(--radius-lg);padding:20px;border:2px solid var(--border-gold);box-shadow:var(--shadow-md)}
+.admin-stat-icon{width:44px;height:44px;border-radius:14px;background:var(--grad-emerald);display:flex;align-items:center;justify-content:center;font-size:20px;color:var(--gold-bright);border:1px solid var(--gold);margin-bottom:12px}
+.admin-stat-label{font-size:12px;color:var(--text-sec);font-weight:600;margin-bottom:6px}
+.admin-stat-value{font-size:28px;font-weight:900;color:var(--emerald)}
+.admin-table{width:100%;background:var(--surface);border-radius:var(--radius-lg);overflow:hidden;border:2px solid var(--border-gold);margin-bottom:20px}
+.admin-table th{background:var(--cream);padding:14px;text-align:right;font-size:13px;font-weight:800;color:var(--emerald);border-bottom:2px solid var(--gold)}
+.admin-table td{padding:14px;border-bottom:1px solid var(--border-gold);font-size:13px}
 .admin-table tr:last-child td{border-bottom:none}
-.badge{display:inline-block;padding:3px 9px;border-radius:var(--radius-full);font-size:10px;font-weight:700}
+.badge{display:inline-block;padding:4px 10px;border-radius:var(--radius-full);font-size:11px;font-weight:700}
 .badge-success{background:rgba(46,125,50,0.1);color:var(--success);border:1px solid var(--success)}
 .badge-warning{background:rgba(237,108,2,0.1);color:var(--warning);border:1px solid var(--warning)}
 .badge-error{background:rgba(211,47,47,0.1);color:var(--error);border:1px solid var(--error)}
 .badge-gold{background:var(--grad-gold);color:var(--emerald-deep);border:1px solid var(--gold-bright)}
-.action-btn{padding:5px 10px;border-radius:8px;font-size:10px;font-weight:700;font-family:inherit;cursor:pointer;border:1px solid var(--border-gold);background:var(--surface);color:var(--emerald);margin:0 2px;touch-action:manipulation}
+.action-btn{padding:6px 12px;border-radius:10px;font-size:11px;font-weight:700;font-family:inherit;cursor:pointer;border:1px solid var(--border-gold);background:var(--surface);color:var(--emerald);margin:0 2px}
 .action-btn.danger{background:rgba(211,47,47,0.1);color:var(--error);border-color:var(--error)}
 .action-btn.success{background:rgba(46,125,50,0.1);color:var(--success);border-color:var(--success)}
-.admin-section{margin-bottom:28px}
-.admin-section-title{font-size:18px;font-weight:800;color:var(--emerald);margin-bottom:14px;padding-bottom:10px;border-bottom:var(--border-gold)}
-.close-admin{position:fixed;top:16px;left:16px;z-index:10001;background:var(--grad-emerald);color:#fff;border:2px solid var(--gold);padding:9px 16px;border-radius:12px;font-size:12px;font-weight:700;font-family:inherit;cursor:pointer;display:flex;align-items:center;gap:5px;box-shadow:var(--shadow-md);touch-action:manipulation}
-.legal-content{padding:20px}
-.legal-content h3{font-size:16px;font-weight:800;color:var(--emerald);margin:18px 0 8px;padding-right:10px;border-right:4px solid var(--gold)}
-.legal-content p{font-size:14px;line-height:1.7;color:var(--text-sec);margin-bottom:10px}
-.legal-content ul{padding-right:20px;margin-bottom:10px}
-.legal-content li{font-size:13px;color:var(--text-sec);margin-bottom:7px;line-height:1.5}
-.legal-footer{margin-top:24px;padding:18px;background:var(--cream);border-radius:var(--radius-xl);text-align:center;border:2px solid var(--gold)}
-.legal-footer p{font-size:11px;color:var(--text-light);font-weight:600}
-.safety-card{background:var(--cream);border:2px solid var(--border-gold);border-radius:var(--radius-xl);padding:16px;margin-bottom:12px;display:flex;align-items:center;gap:12px;cursor:pointer;transition:all 0.3s;box-shadow:var(--shadow-sm);touch-action:manipulation}
-.safety-card:hover{transform:translateX(-5px);box-shadow:var(--shadow-md);border-color:var(--emerald)}
-.safety-card-icon{width:50px;height:50px;border-radius:14px;display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 3px 10px rgba(0,0,0,0.12)}
+.admin-section{margin-bottom:32px}
+.admin-section-title{font-size:20px;font-weight:800;color:var(--emerald);margin-bottom:16px;padding-bottom:12px;border-bottom:var(--border-gold)}
+.close-admin{position:fixed;top:20px;left:20px;z-index:10001;background:var(--grad-emerald);color:#fff;border:2px solid var(--gold);padding:10px 18px;border-radius:14px;font-size:13px;font-weight:700;font-family:inherit;cursor:pointer;display:flex;align-items:center;gap:6px;box-shadow:var(--shadow-md)}
+.legal-content{padding:24px}
+.legal-content h3{font-size:18px;font-weight:800;color:var(--emerald);margin:20px 0 10px;padding-right:12px;border-right:4px solid var(--gold)}
+.legal-content p{font-size:15px;line-height:1.8;color:var(--text-sec);margin-bottom:12px}
+.legal-content ul{padding-right:24px;margin-bottom:12px}
+.legal-content li{font-size:14px;color:var(--text-sec);margin-bottom:8px;line-height:1.6}
+.legal-footer{margin-top:28px;padding:20px;background:var(--cream);border-radius:var(--radius-xl);text-align:center;border:2px solid var(--gold)}
+.legal-footer p{font-size:12px;color:var(--text-light);font-weight:600}
+.safety-card{background:var(--cream);border:2px solid var(--border-gold);border-radius:var(--radius-xl);padding:18px;margin-bottom:14px;display:flex;align-items:center;gap:14px;cursor:pointer;transition:all 0.3s;box-shadow:var(--shadow-sm)}
+.safety-card:hover{transform:translateX(-6px);box-shadow:var(--shadow-md);border-color:var(--emerald)}
+.safety-card-icon{width:56px;height:56px;border-radius:16px;display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 4px 12px rgba(0,0,0,0.15)}
 .safety-card-content{flex:1;min-width:0}
-.safety-card-title{font-size:15px;font-weight:800;color:var(--text);margin-bottom:2px}
-.safety-card-desc{font-size:11px;color:var(--text-sec);line-height:1.4}
-.safety-card-arrow{color:var(--gold);font-size:18px;font-weight:900;flex-shrink:0}
-.safety-tip-card{background:var(--cream);border:2px solid var(--border-gold);border-radius:var(--radius-xl);padding:16px;margin-bottom:10px;display:flex;gap:12px;align-items:flex-start}
-.safety-tip-number{width:32px;height:32px;border-radius:10px;background:var(--grad-emerald);color:var(--gold-bright);display:flex;align-items:center;justify-content:center;font-weight:900;font-size:14px;flex-shrink:0}
+.safety-card-title{font-size:16px;font-weight:800;color:var(--text);margin-bottom:3px}
+.safety-card-desc{font-size:12px;color:var(--text-sec);line-height:1.5}
+.safety-card-arrow{color:var(--gold);font-size:20px;font-weight:900;flex-shrink:0}
+.safety-tip-card{background:var(--cream);border:2px solid var(--border-gold);border-radius:var(--radius-xl);padding:18px;margin-bottom:12px;display:flex;gap:14px;align-items:flex-start}
+.safety-tip-number{width:36px;height:36px;border-radius:12px;background:var(--grad-emerald);color:var(--gold-bright);display:flex;align-items:center;justify-content:center;font-weight:900;font-size:16px;flex-shrink:0}
 .safety-tip-content{flex:1}
-.safety-tip-content h4{font-size:14px;font-weight:800;color:var(--emerald);margin-bottom:3px}
-.safety-tip-content p{font-size:12px;color:var(--text-sec);line-height:1.5}
+.safety-tip-content h4{font-size:15px;font-weight:800;color:var(--emerald);margin-bottom:4px}
+.safety-tip-content p{font-size:13px;color:var(--text-sec);line-height:1.6}
 @keyframes iconShake{0%,100%{transform:rotate(0deg)}25%{transform:rotate(-10deg)}75%{transform:rotate(10deg)}}
-.notification-badge{position:absolute;top:-4px;left:-4px;background:var(--error);color:#fff;font-size:9px;font-weight:900;min-width:16px;height:16px;border-radius:8px;display:flex;align-items:center;justify-content:center;border:2px solid var(--ivory);animation:badgePulse 1s ease infinite;z-index:10;pointer-events:none}
+.notification-badge{position:absolute;top:-5px;left:-5px;background:var(--error);color:#fff;font-size:10px;font-weight:900;min-width:18px;height:18px;border-radius:9px;display:flex;align-items:center;justify-content:center;border:2px solid var(--ivory);animation:badgePulse 1s ease infinite;z-index:10}
 .header-btn.notifying{animation:iconShake 0.5s ease;background:rgba(198,40,40,0.3)!important;border-color:var(--error)!important}
 
-.online-section-title{font-size:15px;font-weight:800;color:var(--emerald);margin:18px 0 10px;padding-right:10px;border-right:4px solid var(--gold);display:flex;align-items:center;gap:6px}
-.online-section-title .count{background:var(--grad-gold);color:var(--emerald-deep);padding:2px 9px;border-radius:var(--radius-full);font-size:11px;font-weight:900}
-.online-user-card{background:var(--cream);border-radius:var(--radius-xl);padding:12px 14px;margin-bottom:8px;display:flex;align-items:center;gap:12px;border:var(--border-gold);box-shadow:var(--shadow-sm);transition:all 0.3s;cursor:pointer;touch-action:manipulation}
-.online-user-card:hover{transform:translateX(-3px);box-shadow:var(--shadow-md);border-color:var(--emerald)}
+.online-section-title{font-size:16px;font-weight:800;color:var(--emerald);margin:20px 0 12px;padding-right:12px;border-right:4px solid var(--gold);display:flex;align-items:center;gap:8px}
+.online-section-title .count{background:var(--grad-gold);color:var(--emerald-deep);padding:2px 10px;border-radius:var(--radius-full);font-size:12px;font-weight:900}
+.online-user-card{background:var(--cream);border-radius:var(--radius-xl);padding:14px 16px;margin-bottom:10px;display:flex;align-items:center;gap:14px;border:var(--border-gold);box-shadow:var(--shadow-sm);transition:all 0.3s;cursor:pointer}
+.online-user-card:hover{transform:translateX(-4px);box-shadow:var(--shadow-md);border-color:var(--emerald)}
 .online-avatar{position:relative;flex-shrink:0}
-.online-avatar .p-avatar{width:50px;height:50px;font-size:18px}
-.status-dot{position:absolute;bottom:1px;right:1px;width:13px;height:13px;border-radius:50%;border:2px solid var(--cream)}
+.online-avatar .p-avatar{width:54px;height:54px;font-size:20px}
+.status-dot{position:absolute;bottom:2px;right:2px;width:14px;height:14px;border-radius:50%;border:2px solid var(--cream)}
 .status-dot.online{background:#2E7D32;box-shadow:0 0 0 2px rgba(46,125,50,0.2);animation:statusPulse 2s ease infinite}
 .status-dot.offline{background:#9AA09C}
-@keyframes statusPulse{0%,100%{box-shadow:0 0 0 2px rgba(46,125,50,0.2)}50%{box-shadow:0 0 0 5px rgba(46,125,50,0)}}
+@keyframes statusPulse{0%,100%{box-shadow:0 0 0 2px rgba(46,125,50,0.2)}50%{box-shadow:0 0 0 6px rgba(46,125,50,0)}}
 .online-user-info{flex:1;min-width:0}
-.online-user-name{font-size:14px;font-weight:800;color:var(--text);margin-bottom:2px;display:flex;align-items:center;gap:5px}
-.online-user-name .verified{color:var(--gold-bright);font-size:11px}
-.online-user-status{font-size:11px;color:var(--text-sec)}
+.online-user-name{font-size:15px;font-weight:800;color:var(--text);margin-bottom:2px;display:flex;align-items:center;gap:6px}
+.online-user-name .verified{color:var(--gold-bright);font-size:12px}
+.online-user-status{font-size:12px;color:var(--text-sec)}
 .online-user-status.active{color:var(--success);font-weight:700}
-.online-user-action{width:34px;height:34px;border-radius:50%;background:var(--grad-emerald);border:1px solid var(--gold);display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--gold-bright);flex-shrink:0;transition:all 0.2s;font-size:13px;touch-action:manipulation}
+.online-user-action{width:36px;height:36px;border-radius:50%;background:var(--grad-emerald);border:1px solid var(--gold);display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--gold-bright);flex-shrink:0;transition:all 0.2s;font-size:14px}
 .online-user-action:hover{transform:scale(1.1)}
-.live-indicator{display:inline-flex;align-items:center;gap:5px;background:rgba(46,125,50,0.1);padding:3px 9px;border-radius:var(--radius-full);font-size:10px;font-weight:700;color:var(--success);border:1px solid rgba(46,125,50,0.3)}
-.live-dot{width:7px;height:7px;background:var(--success);border-radius:50%;animation:livePulse 1.5s ease infinite}
+.live-indicator{display:inline-flex;align-items:center;gap:6px;background:rgba(46,125,50,0.1);padding:4px 10px;border-radius:var(--radius-full);font-size:11px;font-weight:700;color:var(--success);border:1px solid rgba(46,125,50,0.3)}
+.live-dot{width:8px;height:8px;background:var(--success);border-radius:50%;animation:livePulse 1.5s ease infinite}
 @keyframes livePulse{0%,100%{opacity:1}50%{opacity:0.3}}
 
-.filter-container{background:var(--cream);border:var(--border-gold);border-radius:var(--radius-xl);padding:14px;margin-bottom:18px;box-shadow:var(--shadow-sm)}
-.filter-row{display:flex;gap:10px;margin-bottom:10px;align-items:center}
+.filter-container{background:var(--cream);border:var(--border-gold);border-radius:var(--radius-xl);padding:16px;margin-bottom:20px;box-shadow:var(--shadow-sm)}
+.filter-row{display:flex;gap:12px;margin-bottom:12px;align-items:center}
 .filter-row:last-child{margin-bottom:0}
-.filter-label{font-size:12px;font-weight:700;color:var(--emerald);min-width:65px}
-.filter-select{flex:1;padding:9px 12px;background:var(--surface);border:2px solid var(--border-gold);border-radius:var(--radius-lg);font-size:12px;font-family:inherit;color:var(--text);outline:none;cursor:pointer;touch-action:manipulation}
+.filter-label{font-size:13px;font-weight:700;color:var(--emerald);min-width:70px}
+.filter-select{flex:1;padding:10px 14px;background:var(--surface);border:2px solid var(--border-gold);border-radius:var(--radius-lg);font-size:13px;font-family:inherit;color:var(--text);outline:none;cursor:pointer}
 .filter-select:focus{border-color:var(--emerald);box-shadow:0 0 0 3px rgba(14,75,58,0.1)}
-.filter-btn{padding:7px 14px;background:var(--grad-emerald);color:#fff;border:none;border-radius:var(--radius-lg);font-size:12px;font-weight:700;cursor:pointer;transition:all 0.2s;touch-action:manipulation}
+.filter-btn{padding:8px 16px;background:var(--grad-emerald);color:#fff;border:none;border-radius:var(--radius-lg);font-size:13px;font-weight:700;cursor:pointer;transition:all 0.2s}
 .filter-btn:hover{transform:translateY(-2px);box-shadow:var(--shadow-md)}
 .filter-btn.active{background:var(--grad-gold);color:var(--emerald-deep)}
 
-.new-user-toast{position:fixed;top:75px;left:50%;transform:translateX(-50%) translateY(-80px);background:linear-gradient(135deg,#0E4B3A,#1A6B52);color:#fff;padding:14px 20px;border-radius:var(--radius-xl);font-size:13px;font-weight:700;opacity:0;transition:all 0.5s;z-index:9998;border:2px solid var(--gold);box-shadow:0 8px 32px rgba(14,75,58,0.3);display:flex;align-items:center;gap:9px;min-width:260px;max-width:90%}
+.new-user-toast{position:fixed;top:80px;left:50%;transform:translateX(-50%) translateY(-80px);background:linear-gradient(135deg,#0E4B3A,#1A6B52);color:#fff;padding:16px 24px;border-radius:var(--radius-xl);font-size:14px;font-weight:700;opacity:0;transition:all 0.5s;z-index:9998;border:2px solid var(--gold);box-shadow:0 8px 32px rgba(14,75,58,0.3);display:flex;align-items:center;gap:10px;min-width:280px}
 .new-user-toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
-.new-user-toast .avatar{width:34px;height:34px;border-radius:50%;background:var(--grad-gold);display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:900;color:var(--emerald-deep);border:2px solid var(--gold-bright)}
+.new-user-toast .avatar{width:36px;height:36px;border-radius:50%;background:var(--grad-gold);display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:900;color:var(--emerald-deep);border:2px solid var(--gold-bright)}
 .new-user-toast .content{flex:1}
-.new-user-toast .title{font-size:12px;color:var(--gold-bright);margin-bottom:1px}
-.new-user-toast .name{font-size:14px;font-weight:800}
+.new-user-toast .title{font-size:13px;color:var(--gold-bright);margin-bottom:2px}
+.new-user-toast .name{font-size:15px;font-weight:800}
 
 @media(max-width:430px){.phone-frame{max-width:100%;border-radius:0;border:none}}
 </style>
@@ -219,34 +218,32 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
 <div class="screen active splash" id="s-splash">
   <div class="splash-logo"></div>
   <h1>الميثاق الغليظ</h1>
-  <p class="splash-subtitle" style="font-family:'Amiri',serif;font-size:14px;line-height:1.7;padding:0 10px">﴿وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً  إِنَّ فِي ذَٰلِكَ لَآيَاتٍ لِّقَوْمٍ يَتَفَكَّرُونَ﴾</p>
+  <p class="splash-subtitle" style="font-family:'Amiri',serif;font-size:15px;line-height:1.7;padding:0 10px">﴿وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً  إِنَّ فِي ذَٰلِكَ لَآيَاتٍ لِّقَوْمٍ يَتَفَكَّرُونَ﴾</p>
   <button class="btn btn-gold" onclick="go('s-home')">ابدأ رحلتك</button>
 </div>
 
 <div class="screen" id="s-home">
   <div class="header">
-    <h1>🏠 الرئيسية</h1>
-    <div class="header-actions">
-      <button class="header-btn" onclick="go('s-online')" title="المتواجدون">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-          <circle cx="9" cy="7" r="4"></circle>
-          <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-          <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-        </svg>
-        <span style="position:absolute;top:6px;left:6px;width:7px;height:7px;background:#2E7D32;border-radius:50%;border:2px solid var(--ivory)"></span>
-      </button>
-      <button class="header-btn" onclick="go('s-notif');clearMessageBadge()" title="الإشعارات" id="notifBtn">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
-        <span class="notification-badge" id="msgBadge" style="display:none">0</span>
-      </button>
-      <button class="header-btn" onclick="go('s-settings')" title="الإعدادات">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
-      </button>
-      <button class="header-btn" onclick="if(confirm('هل تريد تسجيل الخروج؟'))go('s-splash')" title="خروج" style="background:rgba(198,40,40,0.2);border-color:rgba(198,40,40,0.4)">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
-      </button>
-    </div>
+    <h1 style="flex:1">🏠 الرئيسية</h1>
+    <button class="header-btn" onclick="go('s-online')" title="المتواجدون الآن">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+        <circle cx="9" cy="7" r="4"></circle>
+        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+      </svg>
+      <span style="position:absolute;top:8px;left:8px;width:8px;height:8px;background:#2E7D32;border-radius:50%;border:2px solid var(--ivory)"></span>
+    </button>
+    <button class="header-btn" onclick="go('s-notif');clearMessageBadge()" title="الإشعارات" id="notifBtn">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+      <span class="notification-badge" id="msgBadge" style="display:none">0</span>
+    </button>
+    <button class="header-btn" onclick="go('s-settings')" title="الإعدادات">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+    </button>
+    <button class="header-btn" onclick="if(confirm('هل تريد تسجيل الخروج؟'))go('s-splash')" title="تسجيل الخروج" style="background:rgba(198,40,40,0.2);border-color:rgba(198,40,40,0.4)">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+    </button>
   </div>
   <div class="screen-scroll">
     <div class="content">
@@ -284,15 +281,10 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
 </div>
 
 <div class="screen" id="s-search">
-  <div class="header">
-    <h1>البحث</h1>
-    <div class="header-actions">
-      <button class="header-btn" onclick="go('s-home')">→</button>
-    </div>
-  </div>
+  <div class="header"><button class="header-btn" onclick="go('s-home')">→</button><h1>البحث</h1></div>
   <div class="screen-scroll">
     <div class="content">
-      <div class="input-group"><input class="input" placeholder="🔍 ابحث..."></div>
+      <div class="input-group"><input class="input" placeholder=" ابحث..."></div>
       <div class="input-group"><label class="input-label">الدولة</label><select class="input"><option>الكل</option><option>السعودية</option><option>مصر</option></select></div>
       <button class="btn btn-primary" onclick="toast('جاري البحث...');setTimeout(()=>go('s-home'),1000)">بحث</button>
     </div>
@@ -301,7 +293,7 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
 </div>
 
 <div class="screen" id="s-matches">
-  <div class="header"><h1>التوافقات</h1><div class="header-actions"></div></div>
+  <div class="header"><h1>التوافقات</h1></div>
   <div class="screen-scroll">
     <div class="content">
       <div class="p-card" onclick="go('s-profile-detail')"><div class="p-avatar">ف<div class="p-verified">✓</div></div><div class="p-info"><div class="p-name">فاطمة، 26</div><div class="p-badge">توافق 92%</div></div></div>
@@ -312,7 +304,7 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
 </div>
 
 <div class="screen" id="s-fav">
-  <div class="header"><h1>المفضلة</h1><div class="header-actions"></div></div>
+  <div class="header"><h1>المفضلة</h1></div>
   <div class="screen-scroll">
     <div class="content">
       <div class="p-card" onclick="go('s-profile-detail')"><div class="p-avatar">م</div><div class="p-info"><div class="p-name">مريم، 24</div><div class="p-badge">توافق 84%</div></div></div>
@@ -322,14 +314,14 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
 </div>
 
 <div class="screen" id="s-messages">
-  <div class="header"><h1>المحادثات</h1><div class="header-actions"></div></div>
+  <div class="header"><h1>المحادثات</h1></div>
   <div class="screen-scroll">
     <div class="content">
-      <div style="padding:14px 0;border-bottom:1px solid var(--border-gold);cursor:pointer" onclick="toast('فتح المحادثة')">
-        <div style="display:flex;gap:12px;align-items:center">
-          <div class="p-avatar" style="width:50px;height:50px;font-size:18px">ف</div>
-          <div style="flex:1"><div style="font-weight:800;font-size:15px">فاطمة</div><div style="font-size:12px;color:var(--text-sec)">السلام عليكم</div></div>
-          <div style="text-align:left"><div style="font-size:10px;color:var(--text-light)">10:30</div><div style="background:var(--grad-gold);color:var(--emerald-deep);width:20px;height:20px;border-radius:10px;font-size:10px;font-weight:900;display:flex;align-items:center;justify-content:center;margin-top:5px">2</div></div>
+      <div style="padding:16px 0;border-bottom:1px solid var(--border-gold);cursor:pointer" onclick="toast('فتح المحادثة')">
+        <div style="display:flex;gap:14px;align-items:center">
+          <div class="p-avatar" style="width:54px;height:54px;font-size:20px">ف</div>
+          <div style="flex:1"><div style="font-weight:800;font-size:16px">فاطمة</div><div style="font-size:13px;color:var(--text-sec)">السلام عليكم</div></div>
+          <div style="text-align:left"><div style="font-size:11px;color:var(--text-light)">10:30</div><div style="background:var(--grad-gold);color:var(--emerald-deep);width:22px;height:22px;border-radius:11px;font-size:11px;font-weight:900;display:flex;align-items:center;justify-content:center;margin-top:6px">2</div></div>
         </div>
       </div>
     </div>
@@ -339,51 +331,44 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
 
 <div class="screen" id="s-profile-detail">
   <div class="screen-scroll" style="padding-bottom:90px">
-    <div style="background:var(--grad-hero);padding:44px 20px 24px;text-align:center;color:#fff;position:relative;border-bottom:3px solid var(--gold)">
-      <button class="header-btn" style="position:absolute;top:16px;right:16px;background:rgba(255,255,255,0.2);color:#fff" onclick="go('s-home')">→</button>
-      <div class="p-avatar" style="width:100px;height:100px;font-size:40px;margin:0 auto 14px;border:4px solid var(--gold-bright)">ف</div>
-      <h2 style="font-family:'Amiri',serif;font-size:26px;font-weight:700;margin-bottom:5px;color:var(--gold-bright)">فاطمة، 26 ✓</h2>
-      <p style="font-size:13px;opacity:0.95"> الرياض • بكالوريوس • ملتزمة</p>
+    <div style="background:var(--grad-hero);padding:48px 24px 28px;text-align:center;color:#fff;position:relative;border-bottom:3px solid var(--gold)">
+      <button class="header-btn" style="position:absolute;top:20px;right:20px;background:rgba(255,255,255,0.2);color:#fff" onclick="go('s-home')">→</button>
+      <div class="p-avatar" style="width:110px;height:110px;font-size:44px;margin:0 auto 16px;border:4px solid var(--gold-bright)">ف</div>
+      <h2 style="font-family:'Amiri',serif;font-size:28px;font-weight:700;margin-bottom:6px;color:var(--gold-bright)">فاطمة، 26 ✓</h2>
+      <p style="font-size:14px;opacity:0.95">📍 الرياض • بكالوريوس • ملتزمة</p>
     </div>
-    <div style="padding:20px">
-      <h3 style="font-size:17px;font-weight:800;margin-bottom:10px;color:var(--emerald);border-right:4px solid var(--gold);padding-right:10px">نبذة عني</h3>
-      <p style="font-size:14px;line-height:1.7;color:var(--text-sec)">طبيبة أسنان، أحب القراءة والسفر، أبحث عن شريك حياة يشاركني القيم والأهداف.</p>
+    <div style="padding:24px">
+      <h3 style="font-size:18px;font-weight:800;margin-bottom:12px;color:var(--emerald);border-right:4px solid var(--gold);padding-right:12px">نبذة عني</h3>
+      <p style="font-size:15px;line-height:1.8;color:var(--text-sec)">طبيبة أسنان، أحب القراءة والسفر، أبحث عن شريك حياة يشاركني القيم والأهداف.</p>
     </div>
-    <div style="padding:20px">
-      <h3 style="font-size:17px;font-weight:800;margin-bottom:10px;color:var(--emerald);border-right:4px solid var(--gold);padding-right:10px">التوافق</h3>
+    <div style="padding:24px">
+      <h3 style="font-size:18px;font-weight:800;margin-bottom:12px;color:var(--emerald);border-right:4px solid var(--gold);padding-right:12px">التوافق</h3>
       <div class="card">
-        <div style="display:flex;justify-content:space-between;margin-bottom:7px"><span style="font-weight:700">نسبة التوافق</span><span style="font-size:22px;font-weight:900;color:var(--emerald)">92%</span></div>
-        <div style="background:var(--cream-warm);height:9px;border-radius:5px;overflow:hidden"><div style="background:var(--grad-gold);height:100%;width:92%"></div></div>
+        <div style="display:flex;justify-content:space-between;margin-bottom:8px"><span style="font-weight:700">نسبة التوافق</span><span style="font-size:24px;font-weight:900;color:var(--emerald)">92%</span></div>
+        <div style="background:var(--cream-warm);height:10px;border-radius:5px;overflow:hidden"><div style="background:var(--grad-gold);height:100%;width:92%"></div></div>
       </div>
     </div>
   </div>
-  <div style="display:flex;gap:8px;padding:16px 20px;background:var(--grad-hero);border-top:var(--border-gold)">
+  <div style="display:flex;gap:10px;padding:18px 24px;background:var(--grad-hero);border-top:var(--border-gold)">
     <button class="btn btn-outline btn-sm" onclick="toast('⭐ تمت الإضافة للمفضلة')" style="flex:1">⭐ مفضلة</button>
     <button class="btn btn-primary" onclick="toast('✓ تم إبداء الاهتمام الجاد')" style="flex:1">إبداء اهتمام</button>
   </div>
 </div>
 
 <div class="screen" id="s-notif">
-  <div class="header">
-    <h1>الإشعارات</h1>
-    <div class="header-actions">
-      <button class="header-btn" onclick="go('s-home')">→</button>
-    </div>
-  </div>
+  <div class="header"><button class="header-btn" onclick="go('s-home')">→</button><h1>الإشعارات</h1></div>
   <div class="screen-scroll">
     <div class="content">
-      <div style="display:flex;gap:12px;padding:14px 0;border-bottom:1px solid var(--border-gold)"><div style="width:9px;height:9px;border-radius:50%;background:var(--grad-gold);margin-top:7px"></div><div style="flex:1"><div style="font-size:14px;font-weight:700;margin-bottom:2px">توافق جديد!</div><div style="font-size:12px;color:var(--text-sec)">فاطمة 92%</div></div><div style="font-size:10px;color:var(--text-light)">الآن</div></div>
-      <div style="display:flex;gap:12px;padding:14px 0;border-bottom:1px solid var(--border-gold)"><div style="width:9px;height:9px;border-radius:50%;background:var(--grad-gold);margin-top:7px"></div><div style="flex:1"><div style="font-size:14px;font-weight:700;margin-bottom:2px">اهتمام جاد</div><div style="font-size:12px;color:var(--text-sec)">نورة أبدت اهتماماً</div></div><div style="font-size:10px;color:var(--text-light)">منذ ساعة</div></div>
+      <div style="display:flex;gap:14px;padding:16px 0;border-bottom:1px solid var(--border-gold)"><div style="width:10px;height:10px;border-radius:50%;background:var(--grad-gold);margin-top:8px"></div><div style="flex:1"><div style="font-size:15px;font-weight:700;margin-bottom:3px">توافق جديد!</div><div style="font-size:13px;color:var(--text-sec)">فاطمة 92%</div></div><div style="font-size:11px;color:var(--text-light)">الآن</div></div>
+      <div style="display:flex;gap:14px;padding:16px 0;border-bottom:1px solid var(--border-gold)"><div style="width:10px;height:10px;border-radius:50%;background:var(--grad-gold);margin-top:8px"></div><div style="flex:1"><div style="font-size:15px;font-weight:700;margin-bottom:3px">اهتمام جاد</div><div style="font-size:13px;color:var(--text-sec)">نورة أبدت اهتماماً</div></div><div style="font-size:11px;color:var(--text-light)">منذ ساعة</div></div>
     </div>
   </div>
 </div>
 
 <div class="screen" id="s-online">
   <div class="header">
+    <button class="header-btn" onclick="go('s-home')">→</button>
     <h1>المتواجدون الآن</h1>
-    <div class="header-actions">
-      <button class="header-btn" onclick="go('s-home')">→</button>
-    </div>
   </div>
   <div class="screen-scroll">
     <div class="content">
@@ -393,16 +378,16 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
           <select class="filter-select" id="countryFilter" onchange="filterUsers()">
             <option value="all">الكل</option>
             <option value="saudi">🇸🇦 السعودية</option>
-            <option value="egypt">🇪 مصر</option>
-            <option value="jordan">🇯🇴 الأردن</option>
+            <option value="egypt">🇪🇬 مصر</option>
+            <option value="jordan">🇯 الأردن</option>
             <option value="uae">🇦🇪 الإمارات</option>
           </select>
         </div>
         <div class="filter-row">
           <span class="filter-label">🔄 الترتيب:</span>
           <select class="filter-select" id="sortFilter" onchange="sortUsers()">
-            <option value="recent"> الأحدث نشاطاً</option>
-            <option value="online">🟢 المتواجدون أولاً</option>
+            <option value="recent">🕐 الأحدث نشاطاً</option>
+            <option value="online"> المتواجدون أولاً</option>
             <option value="alpha">🔤 أبجدي</option>
           </select>
         </div>
@@ -411,16 +396,16 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
         </div>
       </div>
 
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:18px">
-        <div style="background:linear-gradient(135deg,rgba(46,125,50,0.1),rgba(46,125,50,0.03));border:2px solid var(--success);border-radius:var(--radius-xl);padding:14px;text-align:center">
-          <div style="font-size:28px;font-weight:900;color:var(--success)" id="onlineCount">4</div>
-          <div style="font-size:11px;color:var(--text-sec);font-weight:600">متواجدون الآن</div>
-          <div class="live-indicator" style="margin-top:7px;justify-content:center"><span class="live-dot"></span>نشط</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px">
+        <div style="background:linear-gradient(135deg,rgba(46,125,50,0.1),rgba(46,125,50,0.03));border:2px solid var(--success);border-radius:var(--radius-xl);padding:16px;text-align:center">
+          <div style="font-size:32px;font-weight:900;color:var(--success)" id="onlineCount">4</div>
+          <div style="font-size:12px;color:var(--text-sec);font-weight:600">متواجدون الآن</div>
+          <div class="live-indicator" style="margin-top:8px;justify-content:center"><span class="live-dot"></span>نشط</div>
         </div>
-        <div style="background:linear-gradient(135deg,rgba(154,160,156,0.1),rgba(154,160,156,0.03));border:2px solid var(--text-light);border-radius:var(--radius-xl);padding:14px;text-align:center">
-          <div style="font-size:28px;font-weight:900;color:var(--text-light)" id="offlineCount">4</div>
-          <div style="font-size:11px;color:var(--text-sec);font-weight:600">غير متواجدين</div>
-          <div style="margin-top:7px;font-size:10px;color:var(--text-light);font-weight:600">آخر ظهور متفاوت</div>
+        <div style="background:linear-gradient(135deg,rgba(154,160,156,0.1),rgba(154,160,156,0.03));border:2px solid var(--text-light);border-radius:var(--radius-xl);padding:16px;text-align:center">
+          <div style="font-size:32px;font-weight:900;color:var(--text-light)" id="offlineCount">4</div>
+          <div style="font-size:12px;color:var(--text-sec);font-weight:600">غير متواجدين</div>
+          <div style="margin-top:8px;font-size:11px;color:var(--text-light);font-weight:600">آخر ظهور متفاوت</div>
         </div>
       </div>
 
@@ -439,7 +424,7 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
             <div class="online-user-name">فاطمة، 26 <span class="verified">✓</span></div>
             <div class="online-user-status active">🟢 نشطة الآن • 🇸🇦 السعودية</div>
           </div>
-          <div class="online-user-action" onclick="event.stopPropagation();toast('فتح المحادثة')">💬</div>
+          <div class="online-user-action" onclick="event.stopPropagation();toast('فتح المحادثة')"></div>
         </div>
 
         <div class="online-user-card" onclick="go('s-profile-detail')" data-country="saudi" data-name="نورة" data-status="online" data-time="5">
@@ -449,9 +434,9 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
           </div>
           <div class="online-user-info">
             <div class="online-user-name">نورة، 28 <span class="verified">✓</span></div>
-            <div class="online-user-status active">🟢 نشطة منذ 5 دقائق • 🇸🇦 السعودية</div>
+            <div class="online-user-status active">🟢 نشطة منذ 5 دقائق • 🇸 السعودية</div>
           </div>
-          <div class="online-user-action" onclick="event.stopPropagation();toast('فتح المحادثة')">💬</div>
+          <div class="online-user-action" onclick="event.stopPropagation();toast('فتح المحادثة')"></div>
         </div>
 
         <div class="online-user-card" onclick="go('s-profile-detail')" data-country="egypt" data-name="سارة" data-status="online" data-time="الآن">
@@ -461,9 +446,9 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
           </div>
           <div class="online-user-info">
             <div class="online-user-name">سارة، 24</div>
-            <div class="online-user-status active">🟢 نشطة الآن • 🇪🇬 مصر</div>
+            <div class="online-user-status active">🟢 نشطة الآن • 🇬 مصر</div>
           </div>
-          <div class="online-user-action" onclick="event.stopPropagation();toast('فتح المحادثة')">💬</div>
+          <div class="online-user-action" onclick="event.stopPropagation();toast('فتح المحادثة')"></div>
         </div>
 
         <div class="online-user-card" onclick="go('s-profile-detail')" data-country="jordan" data-name="خديجة" data-status="online" data-time="2">
@@ -473,7 +458,7 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
           </div>
           <div class="online-user-info">
             <div class="online-user-name">خديجة، 30 <span class="verified">✓</span></div>
-            <div class="online-user-status active">🟢 نشطة منذ دقيقتين • 🇯🇴 الأردن</div>
+            <div class="online-user-status active">🟢 نشطة منذ دقيقتين • 🇴 الأردن</div>
           </div>
           <div class="online-user-action" onclick="event.stopPropagation();toast('فتح المحادثة')">💬</div>
         </div>
@@ -504,7 +489,7 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
           </div>
           <div class="online-user-info">
             <div class="online-user-name">عائشة، 27 <span class="verified">✓</span></div>
-            <div class="online-user-status">آخر ظهور: أمس 10:30 م • 🇦🇪 الإمارات</div>
+            <div class="online-user-status">آخر ظهور: أمس 10:30 م • 🇦 الإمارات</div>
           </div>
           <div class="online-user-action" onclick="event.stopPropagation();toast('إرسال رسالة')">✉️</div>
         </div>
@@ -516,7 +501,7 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
           </div>
           <div class="online-user-info">
             <div class="online-user-name">زينب، 25</div>
-            <div class="online-user-status">آخر ظهور: منذ 3 ساعات • 🇬 مصر</div>
+            <div class="online-user-status">آخر ظهور: منذ 3 ساعات • 🇪🇬 مصر</div>
           </div>
           <div class="online-user-action" onclick="event.stopPropagation();toast('إرسال رسالة')">✉️</div>
         </div>
@@ -528,16 +513,17 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
           </div>
           <div class="online-user-info">
             <div class="online-user-name">هند، 29 <span class="verified">✓</span></div>
-            <div class="online-user-status">آخر ظهور: منذ يومين • 🇴 الأردن</div>
+            <div class="online-user-status">آخر ظهور: منذ يومين • 🇯🇴 الأردن</div>
           </div>
           <div class="online-user-action" onclick="event.stopPropagation();toast('إرسال رسالة')">✉️</div>
         </div>
       </div>
 
-      <div style="background:rgba(14,75,58,0.05);border:2px solid var(--emerald);border-radius:var(--radius-xl);padding:14px;margin-top:18px;text-align:center">
-        <p style="font-size:12px;color:var(--emerald);font-weight:600">💡 الحالة تُحدّث تلقائياً بناءً على نشاط المستخدم</p>
-        <p style="font-size:10px;color:var(--text-sec);margin-top:5px">المتواجدون الآن: نشطون خلال آخر 15 دقيقة</p>
+      <div style="background:rgba(14,75,58,0.05);border:2px solid var(--emerald);border-radius:var(--radius-xl);padding:16px;margin-top:20px;text-align:center">
+        <p style="font-size:13px;color:var(--emerald);font-weight:600">💡 الحالة تُحدّث تلقائياً بناءً على نشاط المستخدم</p>
+        <p style="font-size:11px;color:var(--text-sec);margin-top:6px">المتواجدون الآن: نشطون خلال آخر 15 دقيقة</p>
       </div>
+
     </div>
   </div>
   <div class="bottom-nav cloneNav"></div>
@@ -552,27 +538,22 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
 </div>
 
 <div class="screen" id="s-settings">
-  <div class="header">
-    <h1>الإعدادات</h1>
-    <div class="header-actions">
-      <button class="header-btn" onclick="go('s-home')">→</button>
-    </div>
-  </div>
+  <div class="header"><button class="header-btn" onclick="go('s-home')">→</button><h1>الإعدادات</h1></div>
   <div class="screen-scroll">
     <div class="content">
-      <div class="card" style="display:flex;align-items:center;gap:14px;margin-bottom:14px;cursor:pointer;border:2px solid var(--gold);background:linear-gradient(135deg,rgba(200,169,107,0.08) 0%,var(--cream) 100%)" onclick="go('s-my-level')">
-        <div style="width:50px;height:50px;border-radius:50%;background:var(--grad-gold);display:flex;align-items:center;justify-content:center;font-size:22px;border:2px solid var(--gold-bright)">🥇</div>
-        <div style="flex:1"><div style="font-weight:800;font-size:15px;color:var(--emerald)">مستواي: Gold</div><div style="font-size:11px;color:var(--text-sec)">420 نقطة • تقدم 70% نحو Royal</div></div>
-        <div style="color:var(--gold);font-size:16px;font-weight:900">←</div>
+      <div class="card" style="display:flex;align-items:center;gap:16px;margin-bottom:16px;cursor:pointer;border:2px solid var(--gold);background:linear-gradient(135deg,rgba(200,169,107,0.08) 0%,var(--cream) 100%)" onclick="go('s-my-level')">
+        <div style="width:54px;height:54px;border-radius:50%;background:var(--grad-gold);display:flex;align-items:center;justify-content:center;font-size:24px;border:2px solid var(--gold-bright)">🥇</div>
+        <div style="flex:1"><div style="font-weight:800;font-size:16px;color:var(--emerald)">مستواي: Gold</div><div style="font-size:12px;color:var(--text-sec)">420 نقطة • تقدم 70% نحو Royal</div></div>
+        <div style="color:var(--gold);font-size:18px;font-weight:900">←</div>
       </div>
-      <div class="card" style="display:flex;align-items:center;gap:14px;margin-bottom:14px;cursor:pointer;border:2px solid var(--emerald);background:linear-gradient(135deg,rgba(14,75,58,0.08) 0%,var(--cream) 100%)" onclick="openAdminLogin()">
-        <div style="width:50px;height:50px;border-radius:50%;background:var(--grad-emerald);display:flex;align-items:center;justify-content:center;font-size:22px;border:2px solid var(--gold)">🛡️</div>
-        <div style="flex:1"><div style="font-weight:800;font-size:15px;color:var(--emerald)">لوحة تحكم المسؤول</div><div style="font-size:11px;color:var(--text-sec)">إدارة المستخدمين والبلاغات</div></div>
-        <div style="color:var(--emerald);font-size:16px;font-weight:900">←</div>
+      <div class="card" style="display:flex;align-items:center;gap:16px;margin-bottom:16px;cursor:pointer;border:2px solid var(--emerald);background:linear-gradient(135deg,rgba(14,75,58,0.08) 0%,var(--cream) 100%)" onclick="openAdminLogin()">
+        <div style="width:54px;height:54px;border-radius:50%;background:var(--grad-emerald);display:flex;align-items:center;justify-content:center;font-size:24px;border:2px solid var(--gold)">🛡️</div>
+        <div style="flex:1"><div style="font-weight:800;font-size:16px;color:var(--emerald)">لوحة تحكم المسؤول</div><div style="font-size:12px;color:var(--text-sec)">إدارة المستخدمين والبلاغات</div></div>
+        <div style="color:var(--emerald);font-size:18px;font-weight:900">←</div>
       </div>
       <h3 class="section-title">الحساب</h3>
       <div class="setting-item" onclick="go('s-subscription')"><div class="setting-icon">💎</div><div class="setting-text"><h4>الاشتراك المميز</h4><p>25€ / شهرياً</p></div><div class="setting-arrow">←</div></div>
-      <div class="setting-item" onclick="go('s-safety')"><div class="setting-icon">️</div><div class="setting-text"><h4>مركز الأمان</h4><p>نصائح وأدوات الحماية</p></div><div class="setting-arrow">←</div></div>
+      <div class="setting-item" onclick="go('s-safety')"><div class="setting-icon">🛡️</div><div class="setting-text"><h4>مركز الأمان</h4><p>نصائح وأدوات الحماية</p></div><div class="setting-arrow">←</div></div>
       <h3 class="section-title">قانوني</h3>
       <div class="setting-item" onclick="go('s-terms')"><div class="setting-icon">📄</div><div class="setting-text"><h4>شروط الاستخدام</h4><p>القواعد والشروط</p></div><div class="setting-arrow">←</div></div>
       <div class="setting-item" onclick="go('s-sharia')"><div class="setting-icon">🕌</div><div class="setting-text"><h4>ميثاق الاستخدام الشرعي</h4><p>الضوابط الشرعية</p></div><div class="setting-arrow">←</div></div>
@@ -581,22 +562,17 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
 </div>
 
 <div class="screen" id="s-subscription">
-  <div class="header">
-    <h1>الاشتراك المميز</h1>
-    <div class="header-actions">
-      <button class="header-btn" onclick="go('s-settings')">→</button>
-    </div>
-  </div>
+  <div class="header"><button class="header-btn" onclick="go('s-settings')">→</button><h1>الاشتراك المميز</h1></div>
   <div class="screen-scroll">
     <div class="content">
-      <div class="card" style="background:var(--grad-hero);color:#fff;border:3px solid var(--gold);padding:28px 24px;margin-bottom:20px">
-        <div style="font-size:13px;color:var(--gold-bright);font-weight:600">✨ الاشتراك المميز</div>
-        <div style="font-size:46px;font-weight:900;margin:10px 0;color:var(--gold-bright)">25€ <span style="font-size:16px;font-weight:600;opacity:0.9">/ شهرياً</span></div>
-        <ul style="list-style:none;margin-top:18px">
-          <li style="padding:8px 0;font-size:14px;display:flex;align-items:center;gap:9px"><span style="background:var(--grad-gold);color:var(--emerald-deep);width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:900">✓</span>فلاتر بحث متقدمة</li>
-          <li style="padding:8px 0;font-size:14px;display:flex;align-items:center;gap:9px"><span style="background:var(--grad-gold);color:var(--emerald-deep);width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:900">✓</span>تفاصيل التوافق الكاملة</li>
-          <li style="padding:8px 0;font-size:14px;display:flex;align-items:center;gap:9px"><span style="background:var(--grad-gold);color:var(--emerald-deep);width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:900">✓</span>مفضلة غير محدودة</li>
-          <li style="padding:8px 0;font-size:14px;display:flex;align-items:center;gap:9px"><span style="background:var(--grad-gold);color:var(--emerald-deep);width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:900">✓</span>أولوية في البحث</li>
+      <div class="card" style="background:var(--grad-hero);color:#fff;border:3px solid var(--gold);padding:32px 28px;margin-bottom:24px">
+        <div style="font-size:14px;color:var(--gold-bright);font-weight:600">✨ الاشتراك المميز</div>
+        <div style="font-size:52px;font-weight:900;margin:12px 0;color:var(--gold-bright)">25€ <span style="font-size:18px;font-weight:600;opacity:0.9">/ شهرياً</span></div>
+        <ul style="list-style:none;margin-top:20px">
+          <li style="padding:9px 0;font-size:15px;display:flex;align-items:center;gap:10px"><span style="background:var(--grad-gold);color:var(--emerald-deep);width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:900">✓</span>فلاتر بحث متقدمة</li>
+          <li style="padding:9px 0;font-size:15px;display:flex;align-items:center;gap:10px"><span style="background:var(--grad-gold);color:var(--emerald-deep);width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:900">✓</span>تفاصيل التوافق الكاملة</li>
+          <li style="padding:9px 0;font-size:15px;display:flex;align-items:center;gap:10px"><span style="background:var(--grad-gold);color:var(--emerald-deep);width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:900">✓</span>مفضلة غير محدودة</li>
+          <li style="padding:9px 0;font-size:15px;display:flex;align-items:center;gap:10px"><span style="background:var(--grad-gold);color:var(--emerald-deep);width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:900">✓</span>أولوية في البحث</li>
         </ul>
       </div>
       <button class="btn btn-gold" onclick="openPaymentModal()">ابدأ التجربة المجانية</button>
@@ -605,95 +581,90 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
 </div>
 
 <div class="screen" id="s-safety">
-  <div class="header">
-    <h1>مركز الأمان</h1>
-    <div class="header-actions">
-      <button class="header-btn" onclick="go('s-settings')">→</button>
-    </div>
-  </div>
+  <div class="header"><button class="header-btn" onclick="go('s-settings')">→</button><h1>مركز الأمان</h1></div>
   <div class="screen-scroll">
     <div class="content">
-      <div style="background:linear-gradient(135deg,rgba(198,40,40,0.08) 0%,rgba(198,40,40,0.03) 100%);border:2px solid var(--error);border-radius:var(--radius-xl);padding:18px;margin-bottom:20px">
-        <div style="display:flex;align-items:center;gap:12px;margin-bottom:10px">
-          <div style="width:46px;height:46px;background:linear-gradient(135deg,#C62828,#B71C1C);border-radius:13px;display:flex;align-items:center;justify-content:center;font-size:22px;box-shadow:0 3px 10px rgba(198,40,40,0.3)">🛡️</div>
+      <div style="background:linear-gradient(135deg,rgba(198,40,40,0.08) 0%,rgba(198,40,40,0.03) 100%);border:2px solid var(--error);border-radius:var(--radius-xl);padding:20px;margin-bottom:24px">
+        <div style="display:flex;align-items:center;gap:14px;margin-bottom:12px">
+          <div style="width:50px;height:50px;background:linear-gradient(135deg,#C62828,#B71C1C);border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:24px;box-shadow:0 4px 12px rgba(198,40,40,0.3)">🛡️</div>
           <div>
-            <div style="font-size:15px;font-weight:800;color:var(--error)">سلامتك أولويتنا</div>
-            <div style="font-size:11px;color:var(--text-sec);margin-top:1px">نصائح لحماية حسابك وبياناتك</div>
+            <div style="font-size:16px;font-weight:800;color:var(--error)">سلامتك أولويتنا</div>
+            <div style="font-size:12px;color:var(--text-sec);margin-top:2px">نصائح لحماية حسابك وبياناتك</div>
           </div>
         </div>
-        <p style="font-size:12px;color:var(--text);line-height:1.6">لا تشارك بياناتك المالية أو كلمات المرور مع أي شخص. المنصة لن تطلب منك ذلك أبداً.</p>
+        <p style="font-size:13px;color:var(--text);line-height:1.7">لا تشارك بياناتك المالية أو كلمات المرور مع أي شخص. المنصة لن تطلب منك ذلك أبداً.</p>
       </div>
-      <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px">
-        <h3 style="font-size:16px;font-weight:800;color:var(--emerald)">الأمان والحماية</h3>
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px">
+        <h3 style="font-size:18px;font-weight:800;color:var(--emerald)">الأمان والحماية</h3>
         <div style="flex:1;height:2px;background:linear-gradient(90deg,var(--gold),transparent)"></div>
       </div>
       <div class="safety-card" onclick="go('s-safety-protect')">
         <div class="safety-card-icon" style="background:linear-gradient(135deg,#0E4B3A,#1A6B52)">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D4B87A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#D4B87A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
         </div>
         <div class="safety-card-content">
           <div class="safety-card-title">كيف تحمي نفسك؟</div>
-          <div class="safety-card-desc">نصائح أساسية للأمان الرقمي</div>
+          <div class="safety-card-desc">نصائح أساسية للأمان الرقمي وحماية حسابك</div>
         </div>
         <div class="safety-card-arrow">←</div>
       </div>
       <div class="safety-card" onclick="go('s-safety-money')">
         <div class="safety-card-icon" style="background:linear-gradient(135deg,#D97706,#B45309)">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F4E8C1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#F4E8C1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
         </div>
         <div class="safety-card-content">
           <div class="safety-card-title">طلبات المال والاحتيال</div>
-          <div class="safety-card-desc">كيف تتعامل مع طلبات التحويل</div>
+          <div class="safety-card-desc">كيف تتعامل مع طلبات التحويل والأموال</div>
         </div>
         <div class="safety-card-arrow">←</div>
       </div>
       <div class="safety-card" onclick="go('s-safety-report')">
         <div class="safety-card-icon" style="background:linear-gradient(135deg,#DC2626,#991B1B)">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FEE2E2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FEE2E2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
         </div>
         <div class="safety-card-content">
           <div class="safety-card-title">الإبلاغ عن حساب مشبوه</div>
-          <div class="safety-card-desc">كيف تبلغ عن سلوك مخالف</div>
+          <div class="safety-card-desc">كيف تبلغ عن سلوك غير لائق أو مخالف</div>
         </div>
         <div class="safety-card-arrow">←</div>
       </div>
       <div class="safety-card" onclick="go('s-safety-block')">
         <div class="safety-card-icon" style="background:linear-gradient(135deg,#4B5563,#1F2937)">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E5E7EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg>
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#E5E7EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg>
         </div>
         <div class="safety-card-content">
           <div class="safety-card-title">حظر مستخدم</div>
-          <div class="safety-card-desc">كيف تحظر شخصاً مزعجاً</div>
+          <div class="safety-card-desc">كيف تحظر شخصاً يزعجك أو يخالف القواعد</div>
         </div>
         <div class="safety-card-arrow">←</div>
       </div>
       <div class="safety-card" onclick="go('s-safety-blackmail')">
         <div class="safety-card-icon" style="background:linear-gradient(135deg,#7C2D12,#9A3412)">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FED7AA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FED7AA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
         </div>
         <div class="safety-card-content">
           <div class="safety-card-title">التعرض للابتزاز</div>
-          <div class="safety-card-desc">ماذا تفعل عند التهديد</div>
+          <div class="safety-card-desc">ماذا تفعل إذا تعرضت للتهديد أو الابتزاز</div>
         </div>
         <div class="safety-card-arrow">←</div>
       </div>
       <div class="safety-card" onclick="go('s-safety-family')">
         <div class="safety-card-icon" style="background:linear-gradient(135deg,#0E4B3A,#526B50)">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D4B87A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#D4B87A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
         </div>
         <div class="safety-card-content">
           <div class="safety-card-title">الانتقال للتعارف العائلي</div>
-          <div class="safety-card-desc">إرشادات للخطوات الرسمية</div>
+          <div class="safety-card-desc">إرشادات للخطوات الرسمية والآمنة</div>
         </div>
         <div class="safety-card-arrow">←</div>
       </div>
       <div class="safety-card" onclick="go('s-safety-password')">
         <div class="safety-card-icon" style="background:linear-gradient(135deg,#1E40AF,#1E3A8A)">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#DBEAFE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#DBEAFE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
         </div>
         <div class="safety-card-content">
           <div class="safety-card-title">حماية كلمات المرور</div>
-          <div class="safety-card-desc">نصائح لكلمات مرور قوية</div>
+          <div class="safety-card-desc">نصائح لإنشاء كلمات مرور قوية وآمنة</div>
         </div>
         <div class="safety-card-arrow">←</div>
       </div>
@@ -702,187 +673,187 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
 </div>
 
 <div class="screen" id="s-safety-protect">
-  <div class="header"><h1>كيف تحمي نفسك؟</h1><div class="header-actions"><button class="header-btn" onclick="go('s-safety')">→</button></div></div>
+  <div class="header"><button class="header-btn" onclick="go('s-safety')">→</button><h1>كيف تحمي نفسك؟</h1></div>
   <div class="screen-scroll">
     <div class="content">
-      <div style="background:var(--grad-hero);color:#fff;padding:20px;border-radius:var(--radius-xl);margin-bottom:20px;border:2px solid var(--gold)">
-        <div style="font-size:42px;margin-bottom:10px">🛡️</div>
-        <h2 style="font-family:'Amiri',serif;font-size:22px;color:var(--gold-bright);margin-bottom:6px">الأمان الرقمي</h2>
-        <p style="font-size:13px;opacity:0.9">نصائح أساسية لحماية حسابك</p>
+      <div style="background:var(--grad-hero);color:#fff;padding:24px;border-radius:var(--radius-xl);margin-bottom:24px;border:2px solid var(--gold)">
+        <div style="font-size:48px;margin-bottom:12px">🛡️</div>
+        <h2 style="font-family:'Amiri',serif;font-size:24px;color:var(--gold-bright);margin-bottom:8px">الأمان الرقمي</h2>
+        <p style="font-size:14px;opacity:0.9">نصائح أساسية لحماية حسابك وبياناتك الشخصية</p>
       </div>
-      <div class="safety-tip-card"><div class="safety-tip-number">1</div><div class="safety-tip-content"><h4>استخدم كلمة مرور قوية</h4><p>8 أحرف على الأقل، حروف وأرقام ورموز.</p></div></div>
-      <div class="safety-tip-card"><div class="safety-tip-number">2</div><div class="safety-tip-content"><h4>لا تشارك بياناتك الشخصية</h4><p>لا ترسل رقم هاتفك أو معلوماتك البنكية.</p></div></div>
+      <div class="safety-tip-card"><div class="safety-tip-number">1</div><div class="safety-tip-content"><h4>استخدم كلمة مرور قوية</h4><p>اجعل كلمة المرور 8 أحرف على الأقل، تحتوي على حروف وأرقام ورموز.</p></div></div>
+      <div class="safety-tip-card"><div class="safety-tip-number">2</div><div class="safety-tip-content"><h4>لا تشارك بياناتك الشخصية</h4><p>لا ترسل رقم هاتفك أو عنوانك أو معلوماتك البنكية لأي شخص.</p></div></div>
       <div class="safety-tip-card"><div class="safety-tip-number">3</div><div class="safety-tip-content"><h4>تحقق من هوية الشخص</h4><p>ابحث عن حسابات موثقة (تحمل شارة ✓).</p></div></div>
-      <div class="safety-tip-card"><div class="safety-tip-number">4</div><div class="safety-tip-content"><h4>احذر من الروابط المشبوهة</h4><p>لا تضغط على روابط من أشخاص لا تعرفهم.</p></div></div>
-      <div class="safety-tip-card"><div class="safety-tip-number">5</div><div class="safety-tip-content"><h4>أبلغ عن أي سلوك مشبوه</h4><p>إذا شعرت بخداع، أبلغ عنه فوراً.</p></div></div>
-      <div class="safety-tip-card"><div class="safety-tip-number">6</div><div class="safety-tip-content"><h4>احتفظ بسجل المحادثات</h4><p>احتفظ بنسخ كدليل عند الحاجة.</p></div></div>
-      <div style="background:rgba(14,75,58,0.05);border:2px solid var(--emerald);border-radius:var(--radius-xl);padding:16px;margin-top:20px">
-        <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><div style="font-size:28px">💡</div><h4 style="font-size:14px;font-weight:800;color:var(--emerald)">تذكّر دائماً</h4></div>
-        <p style="font-size:12px;color:var(--text);line-height:1.6">فريق دعم الميثاق الغليظ متاح لمساعدتك في أي وقت.</p>
+      <div class="safety-tip-card"><div class="safety-tip-number">4</div><div class="safety-tip-content"><h4>احذر من الروابط المشبوهة</h4><p>لا تضغط على روابط يرسلها لك أشخاص لا تعرفهم.</p></div></div>
+      <div class="safety-tip-card"><div class="safety-tip-number">5</div><div class="safety-tip-content"><h4>أبلغ عن أي سلوك مشبوه</h4><p>إذا شعرت بأن شخصاً يحاول خداعك، أبلغ عنه فوراً.</p></div></div>
+      <div class="safety-tip-card"><div class="safety-tip-number">6</div><div class="safety-tip-content"><h4>احتفظ بسجل المحادثات</h4><p>احتفظ بنسخ من المحادثات المهمة كدليل.</p></div></div>
+      <div style="background:rgba(14,75,58,0.05);border:2px solid var(--emerald);border-radius:var(--radius-xl);padding:20px;margin-top:24px">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px"><div style="font-size:32px">💡</div><h4 style="font-size:16px;font-weight:800;color:var(--emerald)">تذكّر دائماً</h4></div>
+        <p style="font-size:14px;color:var(--text);line-height:1.7">فريق دعم الميثاق الغليظ متاح لمساعدتك في أي وقت.</p>
       </div>
     </div>
   </div>
 </div>
 
 <div class="screen" id="s-safety-money">
-  <div class="header"><h1>طلبات المال والاحتيال</h1><div class="header-actions"><button class="header-btn" onclick="go('s-safety')">→</button></div></div>
+  <div class="header"><button class="header-btn" onclick="go('s-safety')">→</button><h1>طلبات المال والاحتيال</h1></div>
   <div class="screen-scroll">
     <div class="content">
-      <div style="background:linear-gradient(135deg,rgba(217,119,6,0.1),rgba(217,119,6,0.03));border:2px solid var(--warning);border-radius:var(--radius-xl);padding:20px;margin-bottom:20px">
-        <div style="font-size:42px;margin-bottom:10px">⚠️</div>
-        <h2 style="font-family:'Amiri',serif;font-size:22px;color:var(--warning);margin-bottom:6px">تحذير مهم</h2>
-        <p style="font-size:13px;color:var(--text);line-height:1.6">المنصة تحذرك من إرسال أي أموال أو بيانات مالية.</p>
+      <div style="background:linear-gradient(135deg,rgba(217,119,6,0.1),rgba(217,119,6,0.03));border:2px solid var(--warning);border-radius:var(--radius-xl);padding:24px;margin-bottom:24px">
+        <div style="font-size:48px;margin-bottom:12px">⚠️</div>
+        <h2 style="font-family:'Amiri',serif;font-size:24px;color:var(--warning);margin-bottom:8px">تحذير مهم</h2>
+        <p style="font-size:14px;color:var(--text);line-height:1.7">المنصة تحذرك بشدة من إرسال أي أموال أو بيانات مالية لأي شخص.</p>
       </div>
-      <h3 style="font-size:16px;font-weight:800;color:var(--emerald);margin:18px 0 10px;padding-right:10px;border-right:4px solid var(--gold)"> علامات الاحتيال</h3>
-      <div class="safety-tip-card" style="border-color:var(--error)"><div class="safety-tip-number" style="background:var(--error)">!</div><div class="safety-tip-content"><h4>طلب تحويل أموال عاجل</h4><p>أي طلب عاجل للأموال هو احتيال.</p></div></div>
-      <div class="safety-tip-card" style="border-color:var(--error)"><div class="safety-tip-number" style="background:var(--error)">!</div><div class="safety-tip-content"><h4>طلب بيانات البطاقة</h4><p>لا تشارك رقم بطاقتك أو CVV.</p></div></div>
-      <div class="safety-tip-card" style="border-color:var(--error)"><div class="safety-tip-number" style="background:var(--error)">!</div><div class="safety-tip-content"><h4>استثمارات مربحة</h4><p>عروض الاستثمار المضمونة فخ.</p></div></div>
-      <div class="safety-tip-card" style="border-color:var(--error)"><div class="safety-tip-number" style="background:var(--error)">!</div><div class="safety-tip-content"><h4>بطاقات هدايا</h4><p>طلب بطاقات iTunes أو Google Pay احتيال.</p></div></div>
-      <h3 style="font-size:16px;font-weight:800;color:var(--emerald);margin:18px 0 10px;padding-right:10px;border-right:4px solid var(--gold)">✅ كيف تحمي نفسك؟</h3>
-      <div class="safety-tip-card"><div class="safety-tip-number">✓</div><div class="safety-tip-content"><h4>لا ترسل أموالاً أبداً</h4><p>مهما كانت القصة مقنعة.</p></div></div>
-      <div class="safety-tip-card"><div class="safety-tip-number">✓</div><div class="safety-tip-content"><h4>تحقق من القصة</h4><p>اطلب تفاصيل وتحقق منها.</p></div></div>
-      <div class="safety-tip-card"><div class="safety-tip-number">✓</div><div class="safety-tip-content"><h4>استشر شخصاً تثق به</h4><p>قبل أي قرار مالي.</p></div></div>
-      <div class="safety-tip-card"><div class="safety-tip-number">✓</div><div class="safety-tip-content"><h4>أبلغ فوراً</h4><p>إذا طُلبت أموال، أبلغ فوراً.</p></div></div>
+      <h3 style="font-size:18px;font-weight:800;color:var(--emerald);margin:20px 0 12px;padding-right:12px;border-right:4px solid var(--gold)">🚫 علامات الاحتيال الشائعة</h3>
+      <div class="safety-tip-card" style="border-color:var(--error)"><div class="safety-tip-number" style="background:var(--error)">!</div><div class="safety-tip-content"><h4>طلب تحويل أموال عاجل</h4><p>أي شخص يطلب منك تحويل أموال بشكل عاجل هو محتال على الأرجح.</p></div></div>
+      <div class="safety-tip-card" style="border-color:var(--error)"><div class="safety-tip-number" style="background:var(--error)">!</div><div class="safety-tip-content"><h4>طلب بيانات البطاقة البنكية</h4><p>لا تشارك أبداً رقم بطاقتك أو رمز CVV مع أي شخص.</p></div></div>
+      <div class="safety-tip-card" style="border-color:var(--error)"><div class="safety-tip-number" style="background:var(--error)">!</div><div class="safety-tip-content"><h4>الحديث عن استثمارات مربحة</h4><p>تحذير من عروض الاستثمار المضمونة - غالباً ما تكون فخاً.</p></div></div>
+      <div class="safety-tip-card" style="border-color:var(--error)"><div class="safety-tip-number" style="background:var(--error)">!</div><div class="safety-tip-content"><h4>طلب شراء بطاقات هدايا</h4><p>طلب شراء بطاقات iTunes أو Google Pay هو علامة احتيال واضحة.</p></div></div>
+      <h3 style="font-size:18px;font-weight:800;color:var(--emerald);margin:20px 0 12px;padding-right:12px;border-right:4px solid var(--gold)">✅ كيف تحمي نفسك؟</h3>
+      <div class="safety-tip-card"><div class="safety-tip-number">✓</div><div class="safety-tip-content"><h4>لا ترسل أموالاً أبداً</h4><p>مهما كانت القصة مقنعة، لا ترسل أموالاً لشخص لم تقابله.</p></div></div>
+      <div class="safety-tip-card"><div class="safety-tip-number">✓</div><div class="safety-tip-content"><h4>تحقق من القصة</h4><p>اطلب تفاصيل أكثر وتحقق منها.</p></div></div>
+      <div class="safety-tip-card"><div class="safety-tip-number">✓</div><div class="safety-tip-content"><h4>استشر شخصاً تثق به</h4><p>قبل اتخاذ أي قرار مالي، استشر فرداً من العائلة.</p></div></div>
+      <div class="safety-tip-card"><div class="safety-tip-number">✓</div><div class="safety-tip-content"><h4>أبلغ فوراً</h4><p>إذا طلب شخص أموالاً، أبلغ عنه فوراً.</p></div></div>
     </div>
   </div>
 </div>
 
 <div class="screen" id="s-safety-report">
-  <div class="header"><h1>الإبلاغ عن حساب</h1><div class="header-actions"><button class="header-btn" onclick="go('s-safety')">→</button></div></div>
+  <div class="header"><button class="header-btn" onclick="go('s-safety')">→</button><h1>الإبلاغ عن حساب</h1></div>
   <div class="screen-scroll">
     <div class="content">
-      <div style="background:var(--grad-hero);color:#fff;padding:20px;border-radius:var(--radius-xl);margin-bottom:20px;border:2px solid var(--gold)">
-        <div style="font-size:42px;margin-bottom:10px">🚨</div>
-        <h2 style="font-family:'Amiri',serif;font-size:22px;color:var(--gold-bright);margin-bottom:6px">الإبلاغ عن مخالفة</h2>
-        <p style="font-size:13px;opacity:0.9">ساعدنا في حماية المجتمع</p>
+      <div style="background:var(--grad-hero);color:#fff;padding:24px;border-radius:var(--radius-xl);margin-bottom:24px;border:2px solid var(--gold)">
+        <div style="font-size:48px;margin-bottom:12px">🚨</div>
+        <h2 style="font-family:'Amiri',serif;font-size:24px;color:var(--gold-bright);margin-bottom:8px">الإبلاغ عن مخالفة</h2>
+        <p style="font-size:14px;opacity:0.9">ساعدنا في حماية المجتمع بالإبلاغ عن أي سلوك مخالف</p>
       </div>
-      <h3 style="font-size:16px;font-weight:800;color:var(--emerald);margin:18px 0 10px;padding-right:10px;border-right:4px solid var(--gold)">📋 متى يجب الإبلاغ؟</h3>
-      <div class="safety-tip-card"><div class="safety-tip-number">1</div><div class="safety-tip-content"><h4>طلب أموال أو بيانات مالية</h4></div></div>
-      <div class="safety-tip-card"><div class="safety-tip-number">2</div><div class="safety-tip-content"><h4>تحرش أو إساءة لفظية</h4></div></div>
-      <div class="safety-tip-card"><div class="safety-tip-number">3</div><div class="safety-tip-content"><h4>انتحال شخصية</h4></div></div>
-      <div class="safety-tip-card"><div class="safety-tip-number">4</div><div class="safety-tip-content"><h4>محتوى غير لائق</h4></div></div>
-      <div class="safety-tip-card"><div class="safety-tip-number">5</div><div class="safety-tip-content"><h4>ابتزاز أو تهديد</h4></div></div>
-      <h3 style="font-size:16px;font-weight:800;color:var(--emerald);margin:18px 0 10px;padding-right:10px;border-right:4px solid var(--gold)">🔧 كيفية الإبلاغ</h3>
-      <div style="background:var(--cream);border:2px solid var(--border-gold);border-radius:var(--radius-xl);padding:16px;margin-bottom:12px">
-        <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><div style="width:36px;height:36px;background:var(--grad-emerald);border-radius:9px;display:flex;align-items:center;justify-content:center;color:var(--gold-bright);font-weight:800">1</div><h4 style="font-size:14px;font-weight:700;color:var(--emerald)">من الملف الشخصي</h4></div>
-        <p style="font-size:12px;color:var(--text-sec);padding-right:46px">اضغط على ⚠️ في أعلى الملف</p>
+      <h3 style="font-size:18px;font-weight:800;color:var(--emerald);margin:20px 0 12px;padding-right:12px;border-right:4px solid var(--gold)">📋 متى يجب الإبلاغ؟</h3>
+      <div class="safety-tip-card"><div class="safety-tip-number">1</div><div class="safety-tip-content"><h4>طلب أموال أو بيانات مالية</h4><p>أي طلب لتحويل أموال أو مشاركة معلومات بنكية.</p></div></div>
+      <div class="safety-tip-card"><div class="safety-tip-number">2</div><div class="safety-tip-content"><h4>تحرش أو إساءة لفظية</h4><p>رسائل مسيئة، تهديدات، أو كلام غير لائق.</p></div></div>
+      <div class="safety-tip-card"><div class="safety-tip-number">3</div><div class="safety-tip-content"><h4>انتحال شخصية</h4><p>شخص يدّعي أنه شخص آخر.</p></div></div>
+      <div class="safety-tip-card"><div class="safety-tip-number">4</div><div class="safety-tip-content"><h4>محتوى غير لائق</h4><p>إرسال صور أو محتوى مخالف.</p></div></div>
+      <div class="safety-tip-card"><div class="safety-tip-number">5</div><div class="safety-tip-content"><h4>ابتزاز أو تهديد</h4><p>أي محاولة للابتزاز أو التهديد.</p></div></div>
+      <h3 style="font-size:18px;font-weight:800;color:var(--emerald);margin:20px 0 12px;padding-right:12px;border-right:4px solid var(--gold)">🔧 كيفية الإبلاغ</h3>
+      <div style="background:var(--cream);border:2px solid var(--border-gold);border-radius:var(--radius-xl);padding:20px;margin-bottom:16px">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px"><div style="width:40px;height:40px;background:var(--grad-emerald);border-radius:10px;display:flex;align-items:center;justify-content:center;color:var(--gold-bright);font-weight:800">1</div><h4 style="font-size:15px;font-weight:700;color:var(--emerald)">من الملف الشخصي</h4></div>
+        <p style="font-size:13px;color:var(--text-sec);padding-right:52px">اضغط على أيقونة ⚠️ في أعلى الملف الشخصي</p>
       </div>
-      <div style="background:var(--cream);border:2px solid var(--border-gold);border-radius:var(--radius-xl);padding:16px;margin-bottom:12px">
-        <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><div style="width:36px;height:36px;background:var(--grad-emerald);border-radius:9px;display:flex;align-items:center;justify-content:center;color:var(--gold-bright);font-weight:800">2</div><h4 style="font-size:14px;font-weight:700;color:var(--emerald)">من المحادثة</h4></div>
-        <p style="font-size:12px;color:var(--text-sec);padding-right:46px">اضغط على ⚠️ في أعلى المحادثة</p>
+      <div style="background:var(--cream);border:2px solid var(--border-gold);border-radius:var(--radius-xl);padding:20px;margin-bottom:16px">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px"><div style="width:40px;height:40px;background:var(--grad-emerald);border-radius:10px;display:flex;align-items:center;justify-content:center;color:var(--gold-bright);font-weight:800">2</div><h4 style="font-size:15px;font-weight:700;color:var(--emerald)">من المحادثة</h4></div>
+        <p style="font-size:13px;color:var(--text-sec);padding-right:52px">اضغط على ️ في أعلى المحادثة</p>
       </div>
-      <div style="background:var(--cream);border:2px solid var(--border-gold);border-radius:var(--radius-xl);padding:16px">
-        <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><div style="width:36px;height:36px;background:var(--grad-emerald);border-radius:9px;display:flex;align-items:center;justify-content:center;color:var(--gold-bright);font-weight:800">3</div><h4 style="font-size:14px;font-weight:700;color:var(--emerald)">تحديد السبب</h4></div>
-        <p style="font-size:12px;color:var(--text-sec);padding-right:46px">اختر نوع المخالفة وأضف تفاصيل</p>
+      <div style="background:var(--cream);border:2px solid var(--border-gold);border-radius:var(--radius-xl);padding:20px">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px"><div style="width:40px;height:40px;background:var(--grad-emerald);border-radius:10px;display:flex;align-items:center;justify-content:center;color:var(--gold-bright);font-weight:800">3</div><h4 style="font-size:15px;font-weight:700;color:var(--emerald)">تحديد السبب</h4></div>
+        <p style="font-size:13px;color:var(--text-sec);padding-right:52px">اختر نوع المخالفة وأضف تفاصيل</p>
       </div>
-      <div style="background:rgba(14,75,58,0.05);border:2px solid var(--emerald);border-radius:var(--radius-xl);padding:16px;margin-top:20px">
-        <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><div style="font-size:28px">🔒</div><h4 style="font-size:14px;font-weight:800;color:var(--emerald)">خصوصيتك محمية</h4></div>
-        <p style="font-size:12px;color:var(--text);line-height:1.6">جميع البلاغات سرية تماماً.</p>
+      <div style="background:rgba(14,75,58,0.05);border:2px solid var(--emerald);border-radius:var(--radius-xl);padding:20px;margin-top:24px">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px"><div style="font-size:32px">🔒</div><h4 style="font-size:16px;font-weight:800;color:var(--emerald)">خصوصيتك محمية</h4></div>
+        <p style="font-size:14px;color:var(--text);line-height:1.7">جميع البلاغات سرية تماماً. لن يعرف الشخص المبلَغ عنه هوية من أبلغ عنه.</p>
       </div>
     </div>
   </div>
 </div>
 
 <div class="screen" id="s-safety-block">
-  <div class="header"><h1>حظر مستخدم</h1><div class="header-actions"><button class="header-btn" onclick="go('s-safety')">→</button></div></div>
+  <div class="header"><button class="header-btn" onclick="go('s-safety')">→</button><h1>حظر مستخدم</h1></div>
   <div class="screen-scroll">
     <div class="content">
-      <div style="background:linear-gradient(135deg,#1F2937,#111827);color:#fff;padding:20px;border-radius:var(--radius-xl);margin-bottom:20px;border:2px solid #4B5563">
-        <div style="font-size:42px;margin-bottom:10px">🚫</div>
-        <h2 style="font-family:'Amiri',serif;font-size:22px;color:#E5E7EB;margin-bottom:6px">الحظر الفوري</h2>
-        <p style="font-size:13px;color:#9CA3AF">لن يتمكن المحظور من رؤية ملفك أو مراسلتك</p>
+      <div style="background:linear-gradient(135deg,#1F2937,#111827);color:#fff;padding:24px;border-radius:var(--radius-xl);margin-bottom:24px;border:2px solid #4B5563">
+        <div style="font-size:48px;margin-bottom:12px">🚫</div>
+        <h2 style="font-family:'Amiri',serif;font-size:24px;color:#E5E7EB;margin-bottom:8px">الحظر الفوري</h2>
+        <p style="font-size:14px;color:#9CA3AF">عند حظر شخص، لن يتمكن من رؤية ملفك أو مراسلتك مجدداً</p>
       </div>
-      <h3 style="font-size:16px;font-weight:800;color:var(--emerald);margin:18px 0 10px;padding-right:10px;border-right:4px solid var(--gold)">ماذا يحدث عند الحظر؟</h3>
-      <div class="safety-tip-card"><div class="safety-tip-number">✓</div><div class="safety-tip-content"><h4>توقف جميع الرسائل</h4></div></div>
-      <div class="safety-tip-card"><div class="safety-tip-number">✓</div><div class="safety-tip-content"><h4>إخفاء الملف الشخصي</h4></div></div>
-      <div class="safety-tip-card"><div class="safety-tip-number">✓</div><div class="safety-tip-content"><h4>إزالة من التوافقات</h4></div></div>
-      <div class="safety-tip-card"><div class="safety-tip-number">✓</div><div class="safety-tip-content"><h4>لا إشعار للشخص المحظور</h4></div></div>
-      <h3 style="font-size:16px;font-weight:800;color:var(--emerald);margin:18px 0 10px;padding-right:10px;border-right:4px solid var(--gold)">🔧 كيفية الحظر</h3>
-      <div style="background:var(--cream);border:2px solid var(--border-gold);border-radius:var(--radius-xl);padding:16px;margin-bottom:12px">
-        <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><div style="width:36px;height:36px;background:var(--grad-emerald);border-radius:9px;display:flex;align-items:center;justify-content:center;color:var(--gold-bright);font-weight:800">1</div><h4 style="font-size:14px;font-weight:700;color:var(--emerald)">من الملف الشخصي</h4></div>
-        <p style="font-size:12px;color:var(--text-sec);padding-right:46px">اضغط على 🚫 في أعلى الملف</p>
+      <h3 style="font-size:18px;font-weight:800;color:var(--emerald);margin:20px 0 12px;padding-right:12px;border-right:4px solid var(--gold)">ماذا يحدث عند الحظر؟</h3>
+      <div class="safety-tip-card"><div class="safety-tip-number">✓</div><div class="safety-tip-content"><h4>توقف جميع الرسائل</h4><p>لن يتمكن الشخص المحظور من إرسال أي رسائل إليك.</p></div></div>
+      <div class="safety-tip-card"><div class="safety-tip-number">✓</div><div class="safety-tip-content"><h4>إخفاء الملف الشخصي</h4><p>لن يظهر ملفك للشخص المحظور في نتائج البحث.</p></div></div>
+      <div class="safety-tip-card"><div class="safety-tip-number">✓</div><div class="safety-tip-content"><h4>إزالة من التوافقات</h4><p>سيتم إزالة أي توافق سابق بينكما تلقائياً.</p></div></div>
+      <div class="safety-tip-card"><div class="safety-tip-number">✓</div><div class="safety-tip-content"><h4>لا إشعار للشخص المحظور</h4><p>لن يتم إشعار الشخص بأنه تم حظره.</p></div></div>
+      <h3 style="font-size:18px;font-weight:800;color:var(--emerald);margin:20px 0 12px;padding-right:12px;border-right:4px solid var(--gold)">🔧 كيفية الحظر</h3>
+      <div style="background:var(--cream);border:2px solid var(--border-gold);border-radius:var(--radius-xl);padding:20px;margin-bottom:16px">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px"><div style="width:40px;height:40px;background:var(--grad-emerald);border-radius:10px;display:flex;align-items:center;justify-content:center;color:var(--gold-bright);font-weight:800">1</div><h4 style="font-size:15px;font-weight:700;color:var(--emerald)">من الملف الشخصي</h4></div>
+        <p style="font-size:13px;color:var(--text-sec);padding-right:52px">اضغط على أيقونة 🚫 في أعلى الملف الشخصي</p>
       </div>
-      <div style="background:var(--cream);border:2px solid var(--border-gold);border-radius:var(--radius-xl);padding:16px">
-        <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><div style="width:36px;height:36px;background:var(--grad-emerald);border-radius:9px;display:flex;align-items:center;justify-content:center;color:var(--gold-bright);font-weight:800">2</div><h4 style="font-size:14px;font-weight:700;color:var(--emerald)">تأكيد الحظر</h4></div>
-        <p style="font-size:12px;color:var(--text-sec);padding-right:46px">اضغط "نعم، حظر" في نافذة التأكيد</p>
+      <div style="background:var(--cream);border:2px solid var(--border-gold);border-radius:var(--radius-xl);padding:20px">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px"><div style="width:40px;height:40px;background:var(--grad-emerald);border-radius:10px;display:flex;align-items:center;justify-content:center;color:var(--gold-bright);font-weight:800">2</div><h4 style="font-size:15px;font-weight:700;color:var(--emerald)">تأكيد الحظر</h4></div>
+        <p style="font-size:13px;color:var(--text-sec);padding-right:52px">ستظهر نافذة تأكيد، اضغط "نعم، حظر"</p>
       </div>
     </div>
   </div>
 </div>
 
 <div class="screen" id="s-safety-blackmail">
-  <div class="header"><h1>التعرض للابتزاز</h1><div class="header-actions"><button class="header-btn" onclick="go('s-safety')">→</button></div></div>
+  <div class="header"><button class="header-btn" onclick="go('s-safety')">→</button><h1>التعرض للابتزاز</h1></div>
   <div class="screen-scroll">
     <div class="content">
-      <div style="background:linear-gradient(135deg,rgba(124,45,18,0.1),rgba(154,52,18,0.05));border:2px solid #9A3412;border-radius:var(--radius-xl);padding:20px;margin-bottom:20px">
-        <div style="font-size:42px;margin-bottom:10px">🔐</div>
-        <h2 style="font-family:'Amiri',serif;font-size:22px;color:#9A3412;margin-bottom:6px">حالات الابتزاز</h2>
-        <p style="font-size:13px;color:var(--text);line-height:1.6">إذا تعرضت لابتزاز، أنت لست وحدك.</p>
+      <div style="background:linear-gradient(135deg,rgba(124,45,18,0.1),rgba(154,52,18,0.05));border:2px solid #9A3412;border-radius:var(--radius-xl);padding:24px;margin-bottom:24px">
+        <div style="font-size:48px;margin-bottom:12px"></div>
+        <h2 style="font-family:'Amiri',serif;font-size:24px;color:#9A3412;margin-bottom:8px">حالات الابتزاز</h2>
+        <p style="font-size:14px;color:var(--text);line-height:1.7">إذا تعرضت لابتزاز، أنت لست وحدك.</p>
       </div>
-      <h3 style="font-size:16px;font-weight:800;color:var(--emerald);margin:18px 0 10px;padding-right:10px;border-right:4px solid var(--gold)">🚨 أنواع الابتزاز</h3>
-      <div class="safety-tip-card" style="border-color:var(--error)"><div class="safety-tip-number" style="background:var(--error)">1</div><div class="safety-tip-content"><h4>الابتزاز المالي</h4><p>تهديد بنشر معلومات مقابل مال.</p></div></div>
-      <div class="safety-tip-card" style="border-color:var(--error)"><div class="safety-tip-number" style="background:var(--error)">2</div><div class="safety-tip-content"><h4>الابتزاز العاطفي</h4><p>استخدام مشاعرك للضغط.</p></div></div>
+      <h3 style="font-size:18px;font-weight:800;color:var(--emerald);margin:20px 0 12px;padding-right:12px;border-right:4px solid var(--gold)">🚨 أنواع الابتزاز الشائعة</h3>
+      <div class="safety-tip-card" style="border-color:var(--error)"><div class="safety-tip-number" style="background:var(--error)">1</div><div class="safety-tip-content"><h4>الابتزاز المالي</h4><p>تهديد بنشر معلومات ما لم تدفع مبلغاً.</p></div></div>
+      <div class="safety-tip-card" style="border-color:var(--error)"><div class="safety-tip-number" style="background:var(--error)">2</div><div class="safety-tip-content"><h4>الابتزاز العاطفي</h4><p>استخدام مشاعرك للضغط عليك.</p></div></div>
       <div class="safety-tip-card" style="border-color:var(--error)"><div class="safety-tip-number" style="background:var(--error)">3</div><div class="safety-tip-content"><h4>الابتزاز بالصور</h4><p>تهديد بنشر صور خاصة.</p></div></div>
-      <h3 style="font-size:16px;font-weight:800;color:var(--emerald);margin:18px 0 10px;padding-right:10px;border-right:4px solid var(--gold)">✅ خطوات فورية</h3>
-      <div class="safety-tip-card"><div class="safety-tip-number" style="background:var(--emerald)">1</div><div class="safety-tip-content"><h4>لا تستجب للتهديدات</h4></div></div>
-      <div class="safety-tip-card"><div class="safety-tip-number" style="background:var(--emerald)">2</div><div class="safety-tip-content"><h4>احتفظ بالأدلة</h4></div></div>
-      <div class="safety-tip-card"><div class="safety-tip-number" style="background:var(--emerald)">3</div><div class="safety-tip-content"><h4>أبلغ داخل التطبيق</h4></div></div>
-      <div class="safety-tip-card"><div class="safety-tip-number" style="background:var(--emerald)">4</div><div class="safety-tip-content"><h4>احظر الشخص</h4></div></div>
-      <div class="safety-tip-card"><div class="safety-tip-number" style="background:var(--emerald)">5</div><div class="safety-tip-content"><h4>تواصل مع السلطات</h4></div></div>
-      <div class="safety-tip-card"><div class="safety-tip-number" style="background:var(--emerald)">6</div><div class="safety-tip-content"><h4>استعن بشخص تثق به</h4></div></div>
+      <h3 style="font-size:18px;font-weight:800;color:var(--emerald);margin:20px 0 12px;padding-right:12px;border-right:4px solid var(--gold)">✅ خطوات فورية</h3>
+      <div class="safety-tip-card"><div class="safety-tip-number" style="background:var(--emerald)">1</div><div class="safety-tip-content"><h4>لا تستجب للتهديدات</h4><p>لا تدفع أي مبلغ ولا ترسل أي معلومات إضافية.</p></div></div>
+      <div class="safety-tip-card"><div class="safety-tip-number" style="background:var(--emerald)">2</div><div class="safety-tip-content"><h4>احتفظ بالأدلة</h4><p>احتفظ بنسخ من جميع الرسائل والتهديدات.</p></div></div>
+      <div class="safety-tip-card"><div class="safety-tip-number" style="background:var(--emerald)">3</div><div class="safety-tip-content"><h4>أبلغ داخل التطبيق</h4><p>استخدم زر الإبلاغ فوراً.</p></div></div>
+      <div class="safety-tip-card"><div class="safety-tip-number" style="background:var(--emerald)">4</div><div class="safety-tip-content"><h4>احظر الشخص</h4><p>بعد الإبلاغ، احظر الشخص.</p></div></div>
+      <div class="safety-tip-card"><div class="safety-tip-number" style="background:var(--emerald)">5</div><div class="safety-tip-content"><h4>تواصل مع السلطات</h4><p>في حالات الابتزاز الجدي، تواصل مع الشرطة.</p></div></div>
+      <div class="safety-tip-card"><div class="safety-tip-number" style="background:var(--emerald)">6</div><div class="safety-tip-content"><h4>استعن بشخص تثق به</h4><p>لا تواجه الابتزاز وحدك.</p></div></div>
     </div>
   </div>
 </div>
 
 <div class="screen" id="s-safety-family">
-  <div class="header"><h1>التعارف العائلي</h1><div class="header-actions"><button class="header-btn" onclick="go('s-safety')">→</button></div></div>
+  <div class="header"><button class="header-btn" onclick="go('s-safety')">→</button><h1>التعارف العائلي</h1></div>
   <div class="screen-scroll">
     <div class="content">
-      <div style="background:var(--grad-hero);color:#fff;padding:20px;border-radius:var(--radius-xl);margin-bottom:20px;border:2px solid var(--gold)">
-        <div style="font-size:42px;margin-bottom:10px">👨‍👩‍👧</div>
-        <h2 style="font-family:'Amiri',serif;font-size:22px;color:var(--gold-bright);margin-bottom:6px">الانتقال للخطوات الرسمية</h2>
-        <p style="font-size:13px;opacity:0.9">إرشادات للانتقال للتعارف العائلي</p>
+      <div style="background:var(--grad-hero);color:#fff;padding:24px;border-radius:var(--radius-xl);margin-bottom:24px;border:2px solid var(--gold)">
+        <div style="font-size:48px;margin-bottom:12px">👨‍👩‍👧</div>
+        <h2 style="font-family:'Amiri',serif;font-size:24px;color:var(--gold-bright);margin-bottom:8px">الانتقال للخطوات الرسمية</h2>
+        <p style="font-size:14px;opacity:0.9">إرشادات للانتقال من التعارف الإلكتروني إلى التعارف العائلي</p>
       </div>
-      <h3 style="font-size:16px;font-weight:800;color:var(--emerald);margin:18px 0 10px;padding-right:10px;border-right:4px solid var(--gold)">📋 متى تنتقل؟</h3>
-      <div class="safety-tip-card"><div class="safety-tip-number">1</div><div class="safety-tip-content"><h4>بعد التأكد من الجدية</h4></div></div>
-      <div class="safety-tip-card"><div class="safety-tip-number">2</div><div class="safety-tip-content"><h4>بعد التوافق في القيم</h4></div></div>
-      <div class="safety-tip-card"><div class="safety-tip-number">3</div><div class="safety-tip-content"><h4>بعد فترة تعارف كافية</h4></div></div>
-      <h3 style="font-size:16px;font-weight:800;color:var(--emerald);margin:18px 0 10px;padding-right:10px;border-right:4px solid var(--gold)">👨👩‍👧 إشراك العائلة</h3>
-      <div class="safety-tip-card"><div class="safety-tip-number">✓</div><div class="safety-tip-content"><h4>أخبر ولي أمرك</h4></div></div>
-      <div class="safety-tip-card"><div class="safety-tip-number">✓</div><div class="safety-tip-content"><h4>لقاء عائلي رسمي</h4></div></div>
-      <div class="safety-tip-card"><div class="safety-tip-number">✓</div><div class="safety-tip-content"><h4>التحقق من المعلومات</h4></div></div>
-      <div class="safety-tip-card"><div class="safety-tip-number">✓</div><div class="safety-tip-content"><h4>الخطبة الرسمية</h4></div></div>
+      <h3 style="font-size:18px;font-weight:800;color:var(--emerald);margin:20px 0 12px;padding-right:12px;border-right:4px solid var(--gold)">📋 متى تنتقل للخطوة التالية؟</h3>
+      <div class="safety-tip-card"><div class="safety-tip-number">1</div><div class="safety-tip-content"><h4>بعد التأكد من الجدية</h4><p>عندما تشعر أن الطرف الآخر جاد في نيته للزواج.</p></div></div>
+      <div class="safety-tip-card"><div class="safety-tip-number">2</div><div class="safety-tip-content"><h4>بعد التوافق في القيم</h4><p>عند الاتفاق على القيم الأساسية.</p></div></div>
+      <div class="safety-tip-card"><div class="safety-tip-number">3</div><div class="safety-tip-content"><h4>بعد فترة تعارف كافية</h4><p>لا تتسرع. خذ وقتك الكافي.</p></div></div>
+      <h3 style="font-size:18px;font-weight:800;color:var(--emerald);margin:20px 0 12px;padding-right:12px;border-right:4px solid var(--gold)">👨👩‍👧 إشراك العائلة</h3>
+      <div class="safety-tip-card"><div class="safety-tip-number">✓</div><div class="safety-tip-content"><h4>أخبر ولي أمرك</h4><p>أخبر والدك أو ولي أمرك عن الشخص.</p></div></div>
+      <div class="safety-tip-card"><div class="safety-tip-number">✓</div><div class="safety-tip-content"><h4>لقاء عائلي رسمي</h4><p>رتّب لقاءً بين العائلتين في مكان عام.</p></div></div>
+      <div class="safety-tip-card"><div class="safety-tip-number">✓</div><div class="safety-tip-content"><h4>التحقق من المعلومات</h4><p>تأكد من المعلومات الأساسية عبر العائلة.</p></div></div>
+      <div class="safety-tip-card"><div class="safety-tip-number">✓</div><div class="safety-tip-content"><h4>الخطبة الرسمية</h4><p>بعد التأكد من التوافق، انتقل للخطبة الرسمية.</p></div></div>
     </div>
   </div>
 </div>
 
 <div class="screen" id="s-safety-password">
-  <div class="header"><h1>حماية كلمات المرور</h1><div class="header-actions"><button class="header-btn" onclick="go('s-safety')">→</button></div></div>
+  <div class="header"><button class="header-btn" onclick="go('s-safety')">→</button><h1>حماية كلمات المرور</h1></div>
   <div class="screen-scroll">
     <div class="content">
-      <div style="background:linear-gradient(135deg,#1E40AF,#1E3A8A);color:#fff;padding:20px;border-radius:var(--radius-xl);margin-bottom:20px;border:2px solid #3B82F6">
-        <div style="font-size:42px;margin-bottom:10px">🔑</div>
-        <h2 style="font-family:'Amiri',serif;font-size:22px;color:#DBEAFE;margin-bottom:6px">كلمات المرور القوية</h2>
-        <p style="font-size:13px;opacity:0.9">خط الدفاع الأول</p>
+      <div style="background:linear-gradient(135deg,#1E40AF,#1E3A8A);color:#fff;padding:24px;border-radius:var(--radius-xl);margin-bottom:24px;border:2px solid #3B82F6">
+        <div style="font-size:48px;margin-bottom:12px">🔑</div>
+        <h2 style="font-family:'Amiri',serif;font-size:24px;color:#DBEAFE;margin-bottom:8px">كلمات المرور القوية</h2>
+        <p style="font-size:14px;opacity:0.9">كلمة المرور هي خط الدفاع الأول</p>
       </div>
-      <h3 style="font-size:16px;font-weight:800;color:var(--emerald);margin:18px 0 10px;padding-right:10px;border-right:4px solid var(--gold)">✅ صفات كلمة المرور القوية</h3>
-      <div class="safety-tip-card"><div class="safety-tip-number" style="background:var(--success)">✓</div><div class="safety-tip-content"><h4>8 أحرف على الأقل</h4></div></div>
-      <div class="safety-tip-card"><div class="safety-tip-number" style="background:var(--success)">✓</div><div class="safety-tip-content"><h4>مزيج من الأحرف</h4></div></div>
-      <div class="safety-tip-card"><div class="safety-tip-number" style="background:var(--success)">✓</div><div class="safety-tip-content"><h4>غير متوقعة</h4></div></div>
-      <div class="safety-tip-card"><div class="safety-tip-number" style="background:var(--success)">✓</div><div class="safety-tip-content"><h4>فريدة لكل حساب</h4></div></div>
-      <h3 style="font-size:16px;font-weight:800;color:var(--emerald);margin:18px 0 10px;padding-right:10px;border-right:4px solid var(--gold)">❌ أخطاء شائعة</h3>
-      <div class="safety-tip-card" style="border-color:var(--error)"><div class="safety-tip-number" style="background:var(--error)">✗</div><div class="safety-tip-content"><h4>معلومات شخصية</h4></div></div>
-      <div class="safety-tip-card" style="border-color:var(--error)"><div class="safety-tip-number" style="background:var(--error)">✗</div><div class="safety-tip-content"><h4>كلمات بسيطة</h4></div></div>
-      <div class="safety-tip-card" style="border-color:var(--error)"><div class="safety-tip-number" style="background:var(--error)">✗</div><div class="safety-tip-content"><h4>مشاركة كلمة المرور</h4></div></div>
+      <h3 style="font-size:18px;font-weight:800;color:var(--emerald);margin:20px 0 12px;padding-right:12px;border-right:4px solid var(--gold)">✅ صفات كلمة المرور القوية</h3>
+      <div class="safety-tip-card"><div class="safety-tip-number" style="background:var(--success)">✓</div><div class="safety-tip-content"><h4>8 أحرف على الأقل</h4><p>كلما كانت كلمة المرور أطول، كانت أقوى.</p></div></div>
+      <div class="safety-tip-card"><div class="safety-tip-number" style="background:var(--success)">✓</div><div class="safety-tip-content"><h4>مزيج من الأحرف</h4><p>استخدم حروف كبيرة وصغيرة، أرقام، ورموز.</p></div></div>
+      <div class="safety-tip-card"><div class="safety-tip-number" style="background:var(--success)">✓</div><div class="safety-tip-content"><h4>غير متوقعة</h4><p>تجنب استخدام اسمك أو تاريخ ميلادك.</p></div></div>
+      <div class="safety-tip-card"><div class="safety-tip-number" style="background:var(--success)">✓</div><div class="safety-tip-content"><h4>فريدة لكل حساب</h4><p>لا تستخدم نفس كلمة المرور في مواقع مختلفة.</p></div></div>
+      <h3 style="font-size:18px;font-weight:800;color:var(--emerald);margin:20px 0 12px;padding-right:12px;border-right:4px solid var(--gold)">❌ أخطاء شائعة</h3>
+      <div class="safety-tip-card" style="border-color:var(--error)"><div class="safety-tip-number" style="background:var(--error)">✗</div><div class="safety-tip-content"><h4>استخدام معلومات شخصية</h4><p>لا تستخدم اسمك أو تاريخ ميلادك.</p></div></div>
+      <div class="safety-tip-card" style="border-color:var(--error)"><div class="safety-tip-number" style="background:var(--error)"></div><div class="safety-tip-content"><h4>كلمات مرور بسيطة</h4><p>تجنب 123456 أو password.</p></div></div>
+      <div class="safety-tip-card" style="border-color:var(--error)"><div class="safety-tip-number" style="background:var(--error)"></div><div class="safety-tip-content"><h4>مشاركة كلمة المرور</h4><p>لا تشارك كلمة مرورك مع أي شخص.</p></div></div>
     </div>
   </div>
 </div>
 
 <div class="screen" id="s-terms">
-  <div class="header"><h1>شروط الاستخدام</h1><div class="header-actions"><button class="header-btn" onclick="go('s-settings')">→</button></div></div>
+  <div class="header"><button class="header-btn" onclick="go('s-settings')">→</button><h1>شروط الاستخدام</h1></div>
   <div class="screen-scroll">
     <div class="legal-content">
-      <p style="font-size:11px;color:var(--text-light);margin-bottom:14px">آخر تحديث: 17 سبتمبر 2026</p>
+      <p style="font-size:12px;color:var(--text-light);margin-bottom:16px">آخر تحديث: 17 سبتمبر 2026</p>
       <h3>1. قبول الشروط</h3>
       <p>باستخدامك لتطبيق "الميثاق الغليظ"، فإنك توافق على هذه الشروط.</p>
       <h3>2. وصف الخدمة</h3>
@@ -897,58 +868,58 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
 </div>
 
 <div class="screen" id="s-sharia">
-  <div class="header"><h1>ميثاق الاستخدام الشرعي</h1><div class="header-actions"><button class="header-btn" onclick="go('s-settings')">→</button></div></div>
+  <div class="header"><button class="header-btn" onclick="go('s-settings')">→</button><h1>ميثاق الاستخدام الشرعي</h1></div>
   <div class="screen-scroll">
     <div class="legal-content">
-      <p style="font-size:11px;color:var(--text-light);margin-bottom:14px">آخر تحديث: 17 سبتمبر 2026</p>
-      <div class="card" style="background:rgba(14,75,58,0.05);border:2px solid var(--emerald);margin-bottom:18px">
-        <p style="font-size:14px;font-weight:800;color:var(--emerald);margin-bottom:5px">🕌 ميثاق الاستخدام الشرعي</p>
-        <p style="font-size:13px;color:var(--text-sec)">سياسة المنصة للحفاظ على بيئة محترمة وآمنة.</p>
+      <p style="font-size:12px;color:var(--text-light);margin-bottom:16px">آخر تحديث: 17 سبتمبر 2026</p>
+      <div class="card" style="background:rgba(14,75,58,0.05);border:2px solid var(--emerald);margin-bottom:20px">
+        <p style="font-size:15px;font-weight:800;color:var(--emerald);margin-bottom:6px">🕌 ميثاق الاستخدام الشرعي</p>
+        <p style="font-size:14px;color:var(--text-sec)">هذا الميثاق يمثل سياسة المنصة للحفاظ على بيئة محترمة وآمنة.</p>
       </div>
       <h3>المقدمة</h3>
-      <p style="font-family:'Amiri',serif;font-size:15px;color:var(--emerald);font-weight:700">قال تعالى: ﴿وَأَخَذْنَ مِنكُم مِّيثَاقًا غَلِيظًا﴾ [النساء: 21]</p>
+      <p style="font-family:'Amiri',serif;font-size:16px;color:var(--emerald);font-weight:700">قال تعالى: ﴿وَأَخَذْنَ مِنكُم مِّيثَاقًا غَلِيظًا﴾ [النساء: 21]</p>
       <h3>المبادئ الأساسية</h3>
-      <ul><li><strong>الصدق:</strong> تقديم معلومات حقيقية</li><li><strong>الأمانة:</strong> عدم الخداع</li><li><strong>الاحترام:</strong> التعامل بأدب</li><li><strong>الخصوصية:</strong> عدم نشر معلومات الآخرين</li><li><strong>الجدية:</strong> النية الصادقة للزواج</li></ul>
+      <ul><li><strong>الصدق:</strong> تقديم معلومات حقيقية عن النفس</li><li><strong>الأمانة:</strong> عدم الخداع أو الانتحال</li><li><strong>الاحترام:</strong> التعامل بأدب مع الجميع</li><li><strong>الخصوصية:</strong> عدم نشر معلومات الآخرين دون إذن</li><li><strong>الجدية:</strong> النية الصادقة للزواج</li></ul>
       <div class="legal-footer"><p>© 2026 الميثاق الغليظ — جميع الحقوق محفوظة</p></div>
     </div>
   </div>
 </div>
 
 <div class="screen" id="s-my-level">
-  <div class="header"><h1>مستواي</h1><div class="header-actions"><button class="header-btn" onclick="go('s-settings')">→</button></div></div>
+  <div class="header"><button class="header-btn" onclick="go('s-settings')">→</button><h1>مستواي</h1></div>
   <div class="screen-scroll">
-    <div style="background:var(--grad-hero);padding:28px 20px 36px;position:relative;overflow:hidden;border-bottom:3px solid var(--gold)">
+    <div style="background:var(--grad-hero);padding:32px 24px 40px;position:relative;overflow:hidden;border-bottom:3px solid var(--gold)">
       <div style="position:relative;z-index:1">
-        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px">
-          <div style="font-family:'Amiri',serif;font-size:20px;font-weight:700;color:var(--gold-bright)">عضويتك المميزة</div>
-          <div style="background:rgba(212,184,122,0.15);border:1px solid var(--gold);padding:5px 12px;border-radius:var(--radius-full);font-size:11px;font-weight:700;color:var(--gold-bright)">⭐ عضو منذ سبتمبر 2026</div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:24px">
+          <div style="font-family:'Amiri',serif;font-size:24px;font-weight:700;color:var(--gold-bright)">عضويتك المميزة</div>
+          <div style="background:rgba(212,184,122,0.15);border:1px solid var(--gold);padding:6px 14px;border-radius:var(--radius-full);font-size:12px;font-weight:700;color:var(--gold-bright)">⭐ عضو منذ سبتمبر 2026</div>
         </div>
-        <div style="background:linear-gradient(135deg,rgba(255,255,255,0.08) 0%,rgba(212,184,122,0.1) 100%);border:2px solid var(--gold);border-radius:var(--radius-xl);padding:18px">
-          <div style="display:flex;align-items:center;gap:14px">
-            <div style="width:58px;height:58px;background:var(--grad-gold);border-radius:14px;display:flex;align-items:center;justify-content:center;font-family:'Amiri',serif;font-size:28px;font-weight:700;color:var(--emerald-deep);border:2px solid var(--gold-bright)">م</div>
+        <div style="background:linear-gradient(135deg,rgba(255,255,255,0.08) 0%,rgba(212,184,122,0.1) 100%);border:2px solid var(--gold);border-radius:var(--radius-xl);padding:20px">
+          <div style="display:flex;align-items:center;gap:16px">
+            <div style="width:64px;height:64px;background:var(--grad-gold);border-radius:16px;display:flex;align-items:center;justify-content:center;font-family:'Amiri',serif;font-size:32px;font-weight:700;color:var(--emerald-deep);border:2px solid var(--gold-bright)">م</div>
             <div style="flex:1">
-              <div style="font-family:'Amiri',serif;font-size:16px;font-weight:700;color:var(--gold-bright);margin-bottom:3px">أحمد بن محمد</div>
-              <div style="font-size:10px;color:rgba(244,232,193,0.7);letter-spacing:1px;margin-bottom:5px">MG-2026-0847</div>
-              <div style="display:inline-flex;align-items:center;gap:5px;background:linear-gradient(135deg,var(--gold),var(--gold-bright));padding:3px 10px;border-radius:var(--radius-full);font-size:11px;font-weight:800;color:var(--emerald-deep)"><span>🥇</span><span>GOLD MEMBER</span></div>
+              <div style="font-family:'Amiri',serif;font-size:18px;font-weight:700;color:var(--gold-bright);margin-bottom:4px">أحمد بن محمد</div>
+              <div style="font-size:11px;color:rgba(244,232,193,0.7);letter-spacing:1px;margin-bottom:6px">MG-2026-0847</div>
+              <div style="display:inline-flex;align-items:center;gap:6px;background:linear-gradient(135deg,var(--gold),var(--gold-bright));padding:4px 12px;border-radius:var(--radius-full);font-size:12px;font-weight:800;color:var(--emerald-deep)"><span>🥇</span><span>GOLD MEMBER</span></div>
             </div>
           </div>
-          <div style="background:rgba(255,255,255,0.08);border-radius:12px;padding:14px;margin-top:14px;border:1px solid rgba(212,184,122,0.2)">
-            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px"><span style="font-size:12px;color:rgba(244,232,193,0.9);font-weight:600">التقدم نحو Royal</span><span style="font-size:12px;color:var(--gold-bright);font-weight:800">420 / 600</span></div>
-            <div style="height:9px;background:rgba(255,255,255,0.1);border-radius:5px;overflow:hidden"><div style="height:100%;background:linear-gradient(90deg,var(--gold),var(--gold-bright),#F4E8C1);border-radius:5px;width:70%;box-shadow:0 0 10px rgba(212,184,122,0.5)"></div></div>
-            <div style="font-size:10px;color:rgba(244,232,193,0.7);margin-top:7px;text-align:center"> تحتاج 180 نقطة للوصول إلى المستوى الملكي</div>
+          <div style="background:rgba(255,255,255,0.08);border-radius:14px;padding:16px;margin-top:16px;border:1px solid rgba(212,184,122,0.2)">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px"><span style="font-size:13px;color:rgba(244,232,193,0.9);font-weight:600">التقدم نحو Royal</span><span style="font-size:13px;color:var(--gold-bright);font-weight:800">420 / 600</span></div>
+            <div style="height:10px;background:rgba(255,255,255,0.1);border-radius:5px;overflow:hidden"><div style="height:100%;background:linear-gradient(90deg,var(--gold),var(--gold-bright),#F4E8C1);border-radius:5px;width:70%;box-shadow:0 0 12px rgba(212,184,122,0.5)"></div></div>
+            <div style="font-size:11px;color:rgba(244,232,193,0.7);margin-top:8px;text-align:center">🎯 تحتاج 180 نقطة للوصول إلى المستوى الملكي</div>
           </div>
         </div>
       </div>
     </div>
-    <div style="padding:20px">
-      <div style="display:flex;align-items:center;gap:10px;margin-bottom:18px"><h3 style="font-size:16px;font-weight:800;color:var(--emerald)">📊 تحليل نقاطك</h3><div style="flex:1;height:2px;background:linear-gradient(90deg,var(--gold),transparent)"></div></div>
-      <div class="card" style="margin-bottom:10px">
-        <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px"><div style="width:40px;height:40px;border-radius:12px;background:var(--grad-emerald);display:flex;align-items:center;justify-content:center;font-size:20px;color:var(--gold-bright);border:1px solid var(--gold)">🏅</div><div style="flex:1"><div style="font-size:14px;font-weight:800;color:var(--emerald);margin-bottom:1px">البُعد التجاري</div><div style="font-size:10px;color:var(--text-sec);font-weight:600">الوزن: 30%</div></div><div style="text-align:left"><div style="font-size:20px;font-weight:900;color:var(--emerald);line-height:1">15</div><div style="font-size:10px;color:var(--text-light);font-weight:600">/ 30</div></div></div>
-        <div style="height:5px;background:var(--cream-warm);border-radius:3px;overflow:hidden;margin-top:8px"><div style="height:100%;background:linear-gradient(90deg,#C8A96B,#D4B87A);border-radius:3px;width:50%"></div></div>
+    <div style="padding:24px">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px"><h3 style="font-size:18px;font-weight:800;color:var(--emerald)">📊 تحليل نقاطك</h3><div style="flex:1;height:2px;background:linear-gradient(90deg,var(--gold),transparent)"></div></div>
+      <div class="card" style="margin-bottom:12px">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px"><div style="width:44px;height:44px;border-radius:14px;background:var(--grad-emerald);display:flex;align-items:center;justify-content:center;font-size:22px;color:var(--gold-bright);border:1px solid var(--gold)">🏅</div><div style="flex:1"><div style="font-size:15px;font-weight:800;color:var(--emerald);margin-bottom:2px">البُعد التجاري</div><div style="font-size:11px;color:var(--text-sec);font-weight:600">الوزن: 30%</div></div><div style="text-align:left"><div style="font-size:22px;font-weight:900;color:var(--emerald);line-height:1">15</div><div style="font-size:11px;color:var(--text-light);font-weight:600">/ 30</div></div></div>
+        <div style="height:6px;background:var(--cream-warm);border-radius:3px;overflow:hidden;margin-top:10px"><div style="height:100%;background:linear-gradient(90deg,#C8A96B,#D4B87A);border-radius:3px;width:50%"></div></div>
       </div>
-      <div class="card" style="margin-bottom:10px">
-        <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px"><div style="width:40px;height:40px;border-radius:12px;background:var(--grad-emerald);display:flex;align-items:center;justify-content:center;font-size:20px;color:var(--gold-bright);border:1px solid var(--gold)">✅</div><div style="flex:1"><div style="font-size:14px;font-weight:800;color:var(--emerald);margin-bottom:1px">بُعد التحقق</div><div style="font-size:10px;color:var(--text-sec);font-weight:600">الوزن: 25%</div></div><div style="text-align:left"><div style="font-size:20px;font-weight:900;color:var(--emerald);line-height:1">25</div><div style="font-size:10px;color:var(--text-light);font-weight:600">/ 25</div></div></div>
-        <div style="height:5px;background:var(--cream-warm);border-radius:3px;overflow:hidden;margin-top:8px"><div style="height:100%;background:linear-gradient(90deg,#0E4B3A,#1A6B52);border-radius:3px;width:100%"></div></div>
+      <div class="card" style="margin-bottom:12px">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px"><div style="width:44px;height:44px;border-radius:14px;background:var(--grad-emerald);display:flex;align-items:center;justify-content:center;font-size:22px;color:var(--gold-bright);border:1px solid var(--gold)">✅</div><div style="flex:1"><div style="font-size:15px;font-weight:800;color:var(--emerald);margin-bottom:2px">بُعد التحقق</div><div style="font-size:11px;color:var(--text-sec);font-weight:600">الوزن: 25%</div></div><div style="text-align:left"><div style="font-size:22px;font-weight:900;color:var(--emerald);line-height:1">25</div><div style="font-size:11px;color:var(--text-light);font-weight:600">/ 25</div></div></div>
+        <div style="height:6px;background:var(--cream-warm);border-radius:3px;overflow:hidden;margin-top:10px"><div style="height:100%;background:linear-gradient(90deg,#0E4B3A,#1A6B52);border-radius:3px;width:100%"></div></div>
       </div>
     </div>
   </div>
@@ -960,13 +931,13 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
   <div class="modal">
     <div class="modal-handle"></div>
     <div class="modal-header">
-      <h2>🔐 تسجيل دخول المسؤول</h2>
+      <h2> تسجيل دخول المسؤول</h2>
       <button class="modal-close" onclick="closeModal('adminLoginModal')">✕</button>
     </div>
     <div class="modal-body">
-      <div style="text-align:center;margin-bottom:18px">
-        <div style="width:64px;height:64px;background:var(--grad-emerald);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;margin:0 auto 10px;border:3px solid var(--gold)">🛡️</div>
-        <p style="font-size:13px;color:var(--text-sec)">هذه المنطقة محمية.</p>
+      <div style="text-align:center;margin-bottom:20px">
+        <div style="width:70px;height:70px;background:var(--grad-emerald);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:32px;margin:0 auto 12px;border:3px solid var(--gold)">🛡️</div>
+        <p style="font-size:14px;color:var(--text-sec)">هذه المنطقة محمية. يرجى إدخال بيانات الدخول.</p>
       </div>
       <div class="input-group">
         <label class="input-label">اسم المستخدم</label>
@@ -976,8 +947,8 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
         <label class="input-label">كلمة المرور</label>
         <input class="pay-input" id="adminPassword" type="password" placeholder="أدخل كلمة المرور">
       </div>
-      <div id="loginError" style="display:none;background:rgba(198,40,40,0.1);border:1px solid var(--error);color:var(--error);padding:9px;border-radius:12px;font-size:12px;margin-bottom:14px;text-align:center">
-        ❌ اسم المستخدم أو كلمة المرور غير صحيحة
+      <div id="loginError" style="display:none;background:rgba(198,40,40,0.1);border:1px solid var(--error);color:var(--error);padding:10px;border-radius:14px;font-size:13px;margin-bottom:16px;text-align:center">
+         اسم المستخدم أو كلمة المرور غير صحيحة
       </div>
     </div>
     <div class="modal-footer">
@@ -992,14 +963,14 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
     <div class="modal-handle"></div>
     <div class="modal-header"><h2>تأكيد الاشتراك</h2><button class="modal-close" onclick="closeModal('paymentModal')">✕</button></div>
     <div class="modal-body">
-      <div class="trial-badge"><h3>🎁 تجربة مجانية 7 أيام</h3><p>جميع المزايا المميزة مجاناً</p></div>
-      <h4 style="font-size:15px;font-weight:800;color:var(--emerald);margin-bottom:10px">اختر طريقة الدفع</h4>
-      <div class="pay-method selected" onclick="selectPayMethod(this,'card')"><div class="pay-method-icon"></div><div class="pay-method-info"><h4>بطاقة ائتمان / خصم</h4><p>Visa, Mastercard, Amex</p></div><div class="pay-radio"></div></div>
-      <div class="pay-method" onclick="selectPayMethod(this,'paypal')"><div class="pay-method-icon">🅿️</div><div class="pay-method-info"><h4>PayPal</h4><p>دفع آمن عبر PayPal</p></div><div class="pay-radio"></div></div>
+      <div class="trial-badge"><h3> تجربة مجانية 7 أيام</h3><p>جميع المزايا المميزة مجاناً</p></div>
+      <h4 style="font-size:16px;font-weight:800;color:var(--emerald);margin-bottom:12px">اختر طريقة الدفع</h4>
+      <div class="pay-method selected" onclick="selectPayMethod(this,'card')"><div class="pay-method-icon">💳</div><div class="pay-method-info"><h4>بطاقة ائتمان / خصم</h4><p>Visa, Mastercard, Amex</p></div><div class="pay-radio"></div></div>
+      <div class="pay-method" onclick="selectPayMethod(this,'paypal')"><div class="pay-method-icon">️</div><div class="pay-method-info"><h4>PayPal</h4><p>دفع آمن عبر PayPal</p></div><div class="pay-radio"></div></div>
       <div class="pay-method" onclick="selectPayMethod(this,'apple')"><div class="pay-method-icon">🍎</div><div class="pay-method-info"><h4>Apple Pay</h4><p>دفع سريع عبر Apple</p></div><div class="pay-radio"></div></div>
       <div class="pay-method" onclick="selectPayMethod(this,'google')"><div class="pay-method-icon">📱</div><div class="pay-method-info"><h4>Google Pay</h4><p>دفع عبر Google</p></div><div class="pay-radio"></div></div>
-      <div class="price-box" style="margin-top:18px"><div class="price-row"><span>التجربة المجانية (7 أيام)</span><span style="color:var(--success);font-weight:700">0€</span></div><div class="price-row"><span>بعد الفترة المجانية</span><span style="font-weight:700">25€ / شهرياً</span></div><div class="price-row total"><span>المبلغ اليوم</span><span>0€</span></div></div>
-      <div class="setting-item" style="background:rgba(200,169,107,0.08);border-radius:var(--radius-lg);padding:10px;border:none;margin:0"><input type="checkbox" id="termsCheck" style="width:20px;height:20px;accent-color:var(--gold)"><label for="termsCheck" style="font-size:12px;flex:1">أوافق على شروط الاشتراك. سيتم التجديد بـ 25€ شهرياً بعد 7 أيام.</label></div>
+      <div class="price-box" style="margin-top:20px"><div class="price-row"><span>التجربة المجانية (7 أيام)</span><span style="color:var(--success);font-weight:700">0€</span></div><div class="price-row"><span>بعد الفترة المجانية</span><span style="font-weight:700">25€ / شهرياً</span></div><div class="price-row total"><span>المبلغ اليوم</span><span>0€</span></div></div>
+      <div class="setting-item" style="background:rgba(200,169,107,0.08);border-radius:var(--radius-lg);padding:12px;border:none;margin:0"><input type="checkbox" id="termsCheck" style="width:22px;height:22px;accent-color:var(--gold)"><label for="termsCheck" style="font-size:13px;flex:1">أوافق على شروط الاشتراك. سيتم التجديد بـ 25€ شهرياً بعد 7 أيام ما لم أُلغِ.</label></div>
     </div>
     <div class="modal-footer"><button class="btn btn-ghost" onclick="closeModal('paymentModal')">إلغاء</button><button class="btn btn-primary" onclick="openPayForm()">متابعة الدفع</button></div>
   </div>
@@ -1010,15 +981,12 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
     <div class="modal-handle"></div>
     <div class="modal-header"><h2>💳 بيانات البطاقة</h2><button class="modal-close" onclick="closeModal('cardModal')">✕</button></div>
     <div class="modal-body">
-      <div style="display:flex;gap:5px;margin-bottom:14px"><span style="padding:3px 9px;background:var(--surface);border:1px solid var(--border-gold);border-radius:5px;font-size:10px;font-weight:700;color:var(--text-sec)">VISA</span><span style="padding:3px 9px;background:var(--surface);border:1px solid var(--border-gold);border-radius:5px;font-size:10px;font-weight:700;color:var(--text-sec)">MC</span><span style="padding:3px 9px;background:var(--surface);border:1px solid var(--border-gold);border-radius:5px;font-size:10px;font-weight:700;color:var(--text-sec)">AMEX</span></div>
+      <div style="display:flex;gap:6px;margin-bottom:16px"><span style="padding:4px 10px;background:var(--surface);border:1px solid var(--border-gold);border-radius:6px;font-size:11px;font-weight:700;color:var(--text-sec)">VISA</span><span style="padding:4px 10px;background:var(--surface);border:1px solid var(--border-gold);border-radius:6px;font-size:11px;font-weight:700;color:var(--text-sec)">MC</span><span style="padding:4px 10px;background:var(--surface);border:1px solid var(--border-gold);border-radius:6px;font-size:11px;font-weight:700;color:var(--text-sec)">AMEX</span></div>
       <div class="input-group"><label class="input-label">رقم البطاقة</label><input class="pay-input" id="cardNumber" type="text" maxlength="19" placeholder="0000  0000  0000  0000" oninput="formatCardNumber(this)"><div class="field-error" id="cardNumberError">يرجى إدخال رقم بطاقة صحيح</div></div>
       <div class="input-group"><label class="input-label">اسم حامل البطاقة</label><input class="pay-input" id="cardName" type="text" placeholder="الاسم كما هو على البطاقة"><div class="field-error" id="cardNameError">يرجى إدخال اسم حامل البطاقة</div></div>
-      <div style="display:flex;gap:10px">
-        <div class="input-group" style="flex:1"><label class="input-label">تاريخ الانتهاء</label><input class="pay-input" id="cardExpiry" type="text" maxlength="5" placeholder="MM/YY" oninput="formatExpiry(this)"><div class="field-error" id="cardExpiryError">تاريخ غير صحيح</div></div>
-        <div class="input-group" style="flex:1"><label class="input-label">CVV</label><input class="pay-input" id="cardCVV" type="password" maxlength="4" placeholder="•••"><div class="field-error" id="cardCVVError">CVV غير صحيح</div></div>
-      </div>
+      <div style="display:flex;gap:12px"><div class="input-group" style="flex:1"><label class="input-label">تاريخ الانتهاء</label><input class="pay-input" id="cardExpiry" type="text" maxlength="5" placeholder="MM/YY" oninput="formatExpiry(this)"><div class="field-error" id="cardExpiryError">تاريخ غير صحيح</div></div><div class="input-group" style="flex:1"><label class="input-label">CVV</label><input class="pay-input" id="cardCVV" type="password" maxlength="4" placeholder="•••"><div class="field-error" id="cardCVVError">CVV غير صحيح</div></div></div>
       <div class="secure-badge">🔒 بياناتك مشفرة ومحمية.</div>
-      <div class="price-box" style="margin-top:14px"><div class="price-row total" style="border:none;margin:0;padding:3px 0"><span>المبلغ اليوم</span><span>0€ (تجربة مجانية)</span></div></div>
+      <div class="price-box" style="margin-top:16px"><div class="price-row total" style="border:none;margin:0;padding:4px 0"><span>المبلغ اليوم</span><span>0€ (تجربة مجانية)</span></div></div>
     </div>
     <div class="modal-footer"><button class="btn btn-ghost" onclick="closeModal('cardModal')">رجوع</button><button class="btn btn-primary" onclick="processPayment('card')">تأكيد الدفع</button></div>
   </div>
@@ -1029,9 +997,9 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
     <div class="modal-handle"></div>
     <div class="modal-header"><h2>🅿️ الدفع عبر PayPal</h2><button class="modal-close" onclick="closeModal('paypalModal')">✕</button></div>
     <div class="modal-body">
-      <p style="font-size:13px;color:var(--text-sec);margin-bottom:18px;line-height:1.6">سيتم توجيهك إلى PayPal.</p>
+      <p style="font-size:14px;color:var(--text-sec);margin-bottom:20px;line-height:1.7">سيتم توجيهك إلى PayPal.</p>
       <div class="input-group"><label class="input-label">بريد PayPal الإلكتروني</label><input class="pay-input" id="paypalEmail" type="email" placeholder="example@paypal.com"><div class="field-error" id="paypalEmailError">يرجى إدخال بريد PayPal صحيح</div></div>
-      <div class="secure-badge"> سيتم التحويل إلى موقع PayPal الرسمي.</div>
+      <div class="secure-badge">🔒 سيتم التحويل إلى موقع PayPal الرسمي.</div>
     </div>
     <div class="modal-footer"><button class="btn btn-ghost" onclick="closeModal('paypalModal')">رجوع</button><button class="btn btn-primary" onclick="processPayment('paypal')">متابعة إلى PayPal</button></div>
   </div>
@@ -1042,7 +1010,7 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
     <div class="modal-handle"></div>
     <div class="modal-header"><h2>🍎 Apple Pay</h2><button class="modal-close" onclick="closeModal('appleModal')">✕</button></div>
     <div class="modal-body">
-      <div style="text-align:center;padding:18px 0"><div style="font-size:56px;margin-bottom:14px">🍎</div><h3 style="font-size:16px;font-weight:800;color:var(--emerald);margin-bottom:7px">الدفع عبر Apple Pay</h3><p style="font-size:13px;color:var(--text-sec);line-height:1.6">سيتم فتح نافذة Apple Pay.</p></div>
+      <div style="text-align:center;padding:20px 0"><div style="font-size:64px;margin-bottom:16px">🍎</div><h3 style="font-size:18px;font-weight:800;color:var(--emerald);margin-bottom:8px">الدفع عبر Apple Pay</h3><p style="font-size:14px;color:var(--text-sec);line-height:1.7">سيتم فتح نافذة Apple Pay.</p></div>
       <div class="secure-badge">🔒 الدفع مشفر ومحمي.</div>
     </div>
     <div class="modal-footer"><button class="btn btn-ghost" onclick="closeModal('appleModal')">رجوع</button><button class="btn btn-primary" onclick="processPayment('apple')">تأكيد عبر Apple Pay</button></div>
@@ -1052,10 +1020,10 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
 <div class="modal-overlay" id="googleModal">
   <div class="modal">
     <div class="modal-handle"></div>
-    <div class="modal-header"><h2>📱 Google Pay</h2><button class="modal-close" onclick="closeModal('googleModal')">✕</button></div>
+    <div class="modal-header"><h2> Google Pay</h2><button class="modal-close" onclick="closeModal('googleModal')">✕</button></div>
     <div class="modal-body">
-      <div style="text-align:center;padding:18px 0"><div style="font-size:56px;margin-bottom:14px">📱</div><h3 style="font-size:16px;font-weight:800;color:var(--emerald);margin-bottom:7px">الدفع عبر Google Pay</h3><p style="font-size:13px;color:var(--text-sec);line-height:1.6">سيتم فتح Google Pay.</p></div>
-      <div class="secure-badge"> الدفع مشفر ومحمي.</div>
+      <div style="text-align:center;padding:20px 0"><div style="font-size:64px;margin-bottom:16px">📱</div><h3 style="font-size:18px;font-weight:800;color:var(--emerald);margin-bottom:8px">الدفع عبر Google Pay</h3><p style="font-size:14px;color:var(--text-sec);line-height:1.7">سيتم فتح Google Pay.</p></div>
+      <div class="secure-badge">🔒 الدفع مشفر ومحمي.</div>
     </div>
     <div class="modal-footer"><button class="btn btn-ghost" onclick="closeModal('googleModal')">رجوع</button><button class="btn btn-primary" onclick="processPayment('google')">تأكيد عبر Google Pay</button></div>
   </div>
@@ -1081,37 +1049,37 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
 
 <div class="admin-overlay" id="adminPanel">
   <button class="close-admin" onclick="closeAdminPanel()">🔙 العودة للتطبيق</button>
-  <div class="admin-header"><h2>🛡️ لوحة تحكم المسؤول</h2><div style="font-size:12px;color:var(--gold-bright)">admin@mithaq-ghaliz.com</div></div>
+  <div class="admin-header"><h2>🛡️ لوحة تحكم المسؤول</h2><div style="font-size:13px;color:var(--gold-bright)">admin@mithaq-ghaliz.com</div></div>
   <div class="admin-content">
     <div class="admin-section">
       <div class="admin-section-title">📊 الإحصائيات العامة</div>
       <div class="admin-stats">
         <div class="admin-stat"><div class="admin-stat-icon">👥</div><div class="admin-stat-label">إجمالي المستخدمين</div><div class="admin-stat-value">1,247</div></div>
-        <div class="admin-stat"><div class="admin-stat-icon" style="background:var(--grad-gold);color:var(--emerald-deep)"></div><div class="admin-stat-label">المشتركين المميزين</div><div class="admin-stat-value">186</div></div>
+        <div class="admin-stat"><div class="admin-stat-icon" style="background:var(--grad-gold);color:var(--emerald-deep)">💎</div><div class="admin-stat-label">المشتركين المميزين</div><div class="admin-stat-value">186</div></div>
         <div class="admin-stat"><div class="admin-stat-icon" style="background:linear-gradient(135deg,#0288D1,#01579B);color:#fff">💰</div><div class="admin-stat-label">الإيرادات الشهرية</div><div class="admin-stat-value">4,650€</div></div>
         <div class="admin-stat"><div class="admin-stat-icon" style="background:linear-gradient(135deg,#ED6C02,#D97706);color:#fff">🚨</div><div class="admin-stat-label">البلاغات النشطة</div><div class="admin-stat-value">12</div></div>
       </div>
     </div>
     <div class="admin-section">
-      <div class="admin-section-title">👥 إدارة المستخدمين</div>
+      <div class="admin-section-title"> إدارة المستخدمين</div>
       <table class="admin-table">
         <thead><tr><th>المستخدم</th><th>المستوى</th><th>الحالة</th><th>الإجراءات</th></tr></thead>
         <tbody>
-          <tr><td><strong>أحمد الراشد</strong><br><small style="color:var(--text-sec)">ahmad@email.com</small></td><td><span class="badge badge-gold">Gold</span></td><td><span class="badge badge-success">نشط</span></td><td><button class="action-btn" onclick="toast('عرض التفاصيل')">👁️</button><button class="action-btn danger" onclick="if(confirm('حظر؟'))toast('تم الحظر','error')"></button></td></tr>
-          <tr><td><strong>فاطمة حسن</strong><br><small style="color:var(--text-sec)">fatima@email.com</small></td><td><span class="badge badge-gold">Royal</span></td><td><span class="badge badge-success">نشط</span></td><td><button class="action-btn" onclick="toast('عرض التفاصيل')">️</button><button class="action-btn danger" onclick="if(confirm('حظر؟'))toast('تم الحظر','error')">🚫</button></td></tr>
+          <tr><td><strong>أحمد الراشد</strong><br><small style="color:var(--text-sec)">ahmad@email.com</small></td><td><span class="badge badge-gold">Gold</span></td><td><span class="badge badge-success">نشط</span></td><td><button class="action-btn" onclick="toast('عرض التفاصيل')">👁️</button><button class="action-btn danger" onclick="if(confirm('حظر؟'))toast('تم الحظر','error')">🚫</button></td></tr>
+          <tr><td><strong>فاطمة حسن</strong><br><small style="color:var(--text-sec)">fatima@email.com</small></td><td><span class="badge badge-gold">Royal</span></td><td><span class="badge badge-success">نشط</span></td><td><button class="action-btn" onclick="toast('عرض التفاصيل')">👁️</button><button class="action-btn danger" onclick="if(confirm('حظر؟'))toast('تم الحظر','error')">🚫</button></td></tr>
           <tr><td><strong>محمد العلي</strong><br><small style="color:var(--text-sec)">mohammed@email.com</small></td><td><span class="badge badge-warning">Silver</span></td><td><span class="badge badge-warning">موقوف</span></td><td><button class="action-btn" onclick="toast('عرض التفاصيل')">👁️</button><button class="action-btn success" onclick="toast('تم فتح الحساب ✓','success')">✓ فتح</button></td></tr>
         </tbody>
       </table>
     </div>
     <div class="admin-section">
-      <div class="admin-section-title"> البلاغات النشطة</div>
-      <div class="card" style="margin-bottom:10px;border-color:var(--error);background:rgba(211,47,47,0.03)">
-        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
-          <div style="display:flex;align-items:center;gap:9px"><div style="width:36px;height:36px;border-radius:9px;background:rgba(211,47,47,0.1);display:flex;align-items:center;justify-content:center;font-size:16px">💰</div><div><div style="font-weight:800">طلب أموال</div><div style="font-size:10px;color:var(--text-sec)">منذ 12 دقيقة • عاجل</div></div></div>
+      <div class="admin-section-title">🚨 البلاغات النشطة</div>
+      <div class="card" style="margin-bottom:12px;border-color:var(--error);background:rgba(211,47,47,0.03)">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
+          <div style="display:flex;align-items:center;gap:10px"><div style="width:40px;height:40px;border-radius:10px;background:rgba(211,47,47,0.1);display:flex;align-items:center;justify-content:center;font-size:18px">💰</div><div><div style="font-weight:800">طلب أموال</div><div style="font-size:11px;color:var(--text-sec)">منذ 12 دقيقة • عاجل</div></div></div>
           <span class="badge badge-error">بلاغ #1247</span>
         </div>
-        <div style="font-size:12px;color:var(--text-sec);padding:9px;background:var(--cream);border-radius:9px;margin-bottom:9px">المستخدم يطلب تحويل مبلغ 500€ عبر Western Union</div>
-        <div style="display:flex;gap:7px"><button class="action-btn success" onclick="toast('تم حل البلاغ ✓','success')">✓ حل البلاغ</button><button class="action-btn danger" onclick="if(confirm('حظر المستخدم؟'))toast('تم الحظر 🚫','error')">🚫 حظر</button></div>
+        <div style="font-size:13px;color:var(--text-sec);padding:10px;background:var(--cream);border-radius:10px;margin-bottom:10px">المستخدم يطلب تحويل مبلغ 500€ عبر Western Union</div>
+        <div style="display:flex;gap:8px"><button class="action-btn success" onclick="toast('تم حل البلاغ ✓','success')">✓ حل البلاغ</button><button class="action-btn danger" onclick="if(confirm('حظر المستخدم؟'))toast('تم الحظر 🚫','error')">🚫 حظر</button></div>
       </div>
     </div>
   </div>
@@ -1182,9 +1150,15 @@ function toast(msg, type) {
   setTimeout(() => { t.classList.remove('show'); }, 3000);
 }
 
-function openModal(id) { document.getElementById(id).classList.add('active'); }
+function openModal(id) {
+  document.getElementById(id).classList.add('active');
+}
+
 function openPaymentModal() { openModal('paymentModal'); }
-function closeModal(id) { document.getElementById(id).classList.remove('active'); }
+
+function closeModal(id) {
+  document.getElementById(id).classList.remove('active');
+}
 
 function selectPayMethod(el, method) {
   document.querySelectorAll('.pay-method').forEach(m => m.classList.remove('selected'));
@@ -1194,7 +1168,7 @@ function selectPayMethod(el, method) {
 
 function openPayForm() {
   if (!document.getElementById('termsCheck').checked) {
-    toast('️ يرجى الموافقة على الشروط', 'error');
+    toast('⚠️ يرجى الموافقة على الشروط', 'error');
     return;
   }
   closeModal('paymentModal');
