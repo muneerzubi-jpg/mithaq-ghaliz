@@ -16,10 +16,10 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
 .screen.active{display:flex}
 .screen-scroll{flex:1;overflow-y:auto;padding-bottom:100px;background:var(--ivory);-webkit-overflow-scrolling:touch}
 
-/* ═══ الهيدر الأصلي - العودة للتصميم الذي كان يعمل ═══ */
+/* ═══ الهيدر - الهيكل الصحيح ═══ */
 .header{background:var(--grad-hero);padding:20px 24px 16px;display:flex;align-items:center;gap:12px;border-bottom:var(--border-gold);min-height:68px;flex-shrink:0}
 .header h1{font-size:20px;font-weight:800;flex:1;color:var(--gold-bright)}
-.header-btn{width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,0.1);border:1px solid var(--gold);cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--gold-bright);font-size:18px;transition:all 0.2s;touch-action:manipulation;-webkit-tap-highlight-color:rgba(255,255,255,0.2)}
+.header-btn{width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,0.1);border:1px solid var(--gold);cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--gold-bright);font-size:18px;transition:all 0.2s;touch-action:manipulation;-webkit-tap-highlight-color:rgba(255,255,255,0.2);position:relative;flex-shrink:0}
 .header-btn:active{transform:scale(0.92);background:rgba(255,255,255,0.2)}
 .header-btn svg{pointer-events:none;width:20px;height:20px}
 
@@ -74,6 +74,9 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
 .p-meta{font-size:13px;color:var(--text-sec);margin-bottom:8px}
 .p-badge{display:inline-block;background:var(--grad-gold);color:var(--emerald-deep);padding:5px 12px;border-radius:var(--radius-full);font-size:12px;font-weight:800;border:1px solid var(--gold-bright)}
 .setting-item{display:flex;align-items:center;gap:14px;padding:16px 0;border-bottom:1px solid var(--border-gold);cursor:pointer}
+.setting-item.logout{border-bottom:none;margin-top:10px;padding:16px;background:rgba(198,40,40,0.08);border-radius:var(--radius-xl);border:2px solid var(--error)}
+.setting-item.logout .setting-icon{background:linear-gradient(135deg,#C62828,#B71C1C);border-color:var(--error)}
+.setting-item.logout .setting-text h4{color:var(--error)}
 .setting-icon{width:42px;height:42px;border-radius:14px;background:var(--cream-warm);display:flex;align-items:center;justify-content:center;font-size:18px;border:1px solid var(--gold)}
 .setting-text{flex:1}
 .setting-text h4{font-size:15px;font-weight:700}
@@ -167,7 +170,7 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
 .safety-tip-content h4{font-size:15px;font-weight:800;color:var(--emerald);margin-bottom:4px}
 .safety-tip-content p{font-size:13px;color:var(--text-sec);line-height:1.6}
 @keyframes iconShake{0%,100%{transform:rotate(0deg)}25%{transform:rotate(-10deg)}75%{transform:rotate(10deg)}}
-.notification-badge{position:absolute;top:-5px;left:-5px;background:var(--error);color:#fff;font-size:10px;font-weight:900;min-width:18px;height:18px;border-radius:9px;display:flex;align-items:center;justify-content:center;border:2px solid var(--ivory);animation:badgePulse 1s ease infinite;z-index:10}
+.notification-badge{position:absolute;top:-5px;left:-5px;background:var(--error);color:#fff;font-size:10px;font-weight:900;min-width:18px;height:18px;border-radius:9px;display:flex;align-items:center;justify-content:center;border:2px solid var(--ivory);animation:badgePulse 1s ease infinite;z-index:10;pointer-events:none}
 .header-btn.notifying{animation:iconShake 0.5s ease;background:rgba(198,40,40,0.3)!important;border-color:var(--error)!important}
 
 .online-section-title{font-size:16px;font-weight:800;color:var(--emerald);margin:20px 0 12px;padding-right:12px;border-right:4px solid var(--gold);display:flex;align-items:center;gap:8px}
@@ -222,6 +225,9 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
   <button class="btn btn-gold" onclick="go('s-home')">ابدأ رحلتك</button>
 </div>
 
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- ═══ الشاشة الرئيسية - هيدر بـ 3 أيقونات فقط ═══ -->
+<!-- ═══════════════════════════════════════════════════ -->
 <div class="screen" id="s-home">
   <div class="header">
     <h1 style="flex:1">🏠 الرئيسية</h1>
@@ -232,7 +238,7 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
         <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
         <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
       </svg>
-      <span style="position:absolute;top:8px;left:8px;width:8px;height:8px;background:#2E7D32;border-radius:50%;border:2px solid var(--ivory)"></span>
+      <span style="position:absolute;top:6px;left:6px;width:8px;height:8px;background:#2E7D32;border-radius:50%;border:2px solid var(--ivory)"></span>
     </button>
     <button class="header-btn" onclick="go('s-notif');clearMessageBadge()" title="الإشعارات" id="notifBtn">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
@@ -240,9 +246,6 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
     </button>
     <button class="header-btn" onclick="go('s-settings')" title="الإعدادات">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
-    </button>
-    <button class="header-btn" onclick="if(confirm('هل تريد تسجيل الخروج؟'))go('s-splash')" title="تسجيل الخروج" style="background:rgba(198,40,40,0.2);border-color:rgba(198,40,40,0.4)">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
     </button>
   </div>
   <div class="screen-scroll">
@@ -284,7 +287,7 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
   <div class="header"><button class="header-btn" onclick="go('s-home')">→</button><h1>البحث</h1></div>
   <div class="screen-scroll">
     <div class="content">
-      <div class="input-group"><input class="input" placeholder=" ابحث..."></div>
+      <div class="input-group"><input class="input" placeholder="🔍 ابحث..."></div>
       <div class="input-group"><label class="input-label">الدولة</label><select class="input"><option>الكل</option><option>السعودية</option><option>مصر</option></select></div>
       <button class="btn btn-primary" onclick="toast('جاري البحث...');setTimeout(()=>go('s-home'),1000)">بحث</button>
     </div>
@@ -379,7 +382,7 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
             <option value="all">الكل</option>
             <option value="saudi">🇸🇦 السعودية</option>
             <option value="egypt">🇪🇬 مصر</option>
-            <option value="jordan">🇯 الأردن</option>
+            <option value="jordan">🇯🇴 الأردن</option>
             <option value="uae">🇦🇪 الإمارات</option>
           </select>
         </div>
@@ -387,7 +390,7 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
           <span class="filter-label">🔄 الترتيب:</span>
           <select class="filter-select" id="sortFilter" onchange="sortUsers()">
             <option value="recent">🕐 الأحدث نشاطاً</option>
-            <option value="online"> المتواجدون أولاً</option>
+            <option value="online">🟢 المتواجدون أولاً</option>
             <option value="alpha">🔤 أبجدي</option>
           </select>
         </div>
@@ -424,7 +427,7 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
             <div class="online-user-name">فاطمة، 26 <span class="verified">✓</span></div>
             <div class="online-user-status active">🟢 نشطة الآن • 🇸🇦 السعودية</div>
           </div>
-          <div class="online-user-action" onclick="event.stopPropagation();toast('فتح المحادثة')"></div>
+          <div class="online-user-action" onclick="event.stopPropagation();toast('فتح المحادثة')">💬</div>
         </div>
 
         <div class="online-user-card" onclick="go('s-profile-detail')" data-country="saudi" data-name="نورة" data-status="online" data-time="5">
@@ -434,9 +437,9 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
           </div>
           <div class="online-user-info">
             <div class="online-user-name">نورة، 28 <span class="verified">✓</span></div>
-            <div class="online-user-status active">🟢 نشطة منذ 5 دقائق • 🇸 السعودية</div>
+            <div class="online-user-status active">🟢 نشطة منذ 5 دقائق • 🇸🇦 السعودية</div>
           </div>
-          <div class="online-user-action" onclick="event.stopPropagation();toast('فتح المحادثة')"></div>
+          <div class="online-user-action" onclick="event.stopPropagation();toast('فتح المحادثة')">💬</div>
         </div>
 
         <div class="online-user-card" onclick="go('s-profile-detail')" data-country="egypt" data-name="سارة" data-status="online" data-time="الآن">
@@ -446,9 +449,9 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
           </div>
           <div class="online-user-info">
             <div class="online-user-name">سارة، 24</div>
-            <div class="online-user-status active">🟢 نشطة الآن • 🇬 مصر</div>
+            <div class="online-user-status active">🟢 نشطة الآن • 🇪🇬 مصر</div>
           </div>
-          <div class="online-user-action" onclick="event.stopPropagation();toast('فتح المحادثة')"></div>
+          <div class="online-user-action" onclick="event.stopPropagation();toast('فتح المحادثة')">💬</div>
         </div>
 
         <div class="online-user-card" onclick="go('s-profile-detail')" data-country="jordan" data-name="خديجة" data-status="online" data-time="2">
@@ -458,7 +461,7 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
           </div>
           <div class="online-user-info">
             <div class="online-user-name">خديجة، 30 <span class="verified">✓</span></div>
-            <div class="online-user-status active">🟢 نشطة منذ دقيقتين • 🇴 الأردن</div>
+            <div class="online-user-status active">🟢 نشطة منذ دقيقتين • 🇯🇴 الأردن</div>
           </div>
           <div class="online-user-action" onclick="event.stopPropagation();toast('فتح المحادثة')">💬</div>
         </div>
@@ -489,7 +492,7 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
           </div>
           <div class="online-user-info">
             <div class="online-user-name">عائشة، 27 <span class="verified">✓</span></div>
-            <div class="online-user-status">آخر ظهور: أمس 10:30 م • 🇦 الإمارات</div>
+            <div class="online-user-status">آخر ظهور: أمس 10:30 م • 🇦🇪 الإمارات</div>
           </div>
           <div class="online-user-action" onclick="event.stopPropagation();toast('إرسال رسالة')">✉️</div>
         </div>
@@ -537,8 +540,14 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
   </div>
 </div>
 
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- ═══ الإعدادات - مع زر تسجيل الخروج ═══ -->
+<!-- ═══════════════════════════════════════════════════ -->
 <div class="screen" id="s-settings">
-  <div class="header"><button class="header-btn" onclick="go('s-home')">→</button><h1>الإعدادات</h1></div>
+  <div class="header">
+    <button class="header-btn" onclick="go('s-home')">→</button>
+    <h1>الإعدادات</h1>
+  </div>
   <div class="screen-scroll">
     <div class="content">
       <div class="card" style="display:flex;align-items:center;gap:16px;margin-bottom:16px;cursor:pointer;border:2px solid var(--gold);background:linear-gradient(135deg,rgba(200,169,107,0.08) 0%,var(--cream) 100%)" onclick="go('s-my-level')">
@@ -557,6 +566,17 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
       <h3 class="section-title">قانوني</h3>
       <div class="setting-item" onclick="go('s-terms')"><div class="setting-icon">📄</div><div class="setting-text"><h4>شروط الاستخدام</h4><p>القواعد والشروط</p></div><div class="setting-arrow">←</div></div>
       <div class="setting-item" onclick="go('s-sharia')"><div class="setting-icon">🕌</div><div class="setting-text"><h4>ميثاق الاستخدام الشرعي</h4><p>الضوابط الشرعية</p></div><div class="setting-arrow">←</div></div>
+      
+      <!-- ═══ زر تسجيل الخروج ═══ -->
+      <h3 class="section-title" style="margin-top:30px">الحساب</h3>
+      <div class="setting-item logout" onclick="if(confirm('هل تريد تسجيل الخروج؟'))go('s-splash')">
+        <div class="setting-icon">🚪</div>
+        <div class="setting-text">
+          <h4>تسجيل الخروج</h4>
+          <p>الخروج من الحساب الحالي</p>
+        </div>
+        <div class="setting-arrow" style="color:var(--error)">←</div>
+      </div>
     </div>
   </div>
 </div>
@@ -740,7 +760,7 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
       </div>
       <div style="background:var(--cream);border:2px solid var(--border-gold);border-radius:var(--radius-xl);padding:20px;margin-bottom:16px">
         <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px"><div style="width:40px;height:40px;background:var(--grad-emerald);border-radius:10px;display:flex;align-items:center;justify-content:center;color:var(--gold-bright);font-weight:800">2</div><h4 style="font-size:15px;font-weight:700;color:var(--emerald)">من المحادثة</h4></div>
-        <p style="font-size:13px;color:var(--text-sec);padding-right:52px">اضغط على ️ في أعلى المحادثة</p>
+        <p style="font-size:13px;color:var(--text-sec);padding-right:52px">اضغط على ⚠️ في أعلى المحادثة</p>
       </div>
       <div style="background:var(--cream);border:2px solid var(--border-gold);border-radius:var(--radius-xl);padding:20px">
         <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px"><div style="width:40px;height:40px;background:var(--grad-emerald);border-radius:10px;display:flex;align-items:center;justify-content:center;color:var(--gold-bright);font-weight:800">3</div><h4 style="font-size:15px;font-weight:700;color:var(--emerald)">تحديد السبب</h4></div>
@@ -786,7 +806,7 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
   <div class="screen-scroll">
     <div class="content">
       <div style="background:linear-gradient(135deg,rgba(124,45,18,0.1),rgba(154,52,18,0.05));border:2px solid #9A3412;border-radius:var(--radius-xl);padding:24px;margin-bottom:24px">
-        <div style="font-size:48px;margin-bottom:12px"></div>
+        <div style="font-size:48px;margin-bottom:12px">🔐</div>
         <h2 style="font-family:'Amiri',serif;font-size:24px;color:#9A3412;margin-bottom:8px">حالات الابتزاز</h2>
         <p style="font-size:14px;color:var(--text);line-height:1.7">إذا تعرضت لابتزاز، أنت لست وحدك.</p>
       </div>
@@ -818,7 +838,7 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
       <div class="safety-tip-card"><div class="safety-tip-number">1</div><div class="safety-tip-content"><h4>بعد التأكد من الجدية</h4><p>عندما تشعر أن الطرف الآخر جاد في نيته للزواج.</p></div></div>
       <div class="safety-tip-card"><div class="safety-tip-number">2</div><div class="safety-tip-content"><h4>بعد التوافق في القيم</h4><p>عند الاتفاق على القيم الأساسية.</p></div></div>
       <div class="safety-tip-card"><div class="safety-tip-number">3</div><div class="safety-tip-content"><h4>بعد فترة تعارف كافية</h4><p>لا تتسرع. خذ وقتك الكافي.</p></div></div>
-      <h3 style="font-size:18px;font-weight:800;color:var(--emerald);margin:20px 0 12px;padding-right:12px;border-right:4px solid var(--gold)">👨👩‍👧 إشراك العائلة</h3>
+      <h3 style="font-size:18px;font-weight:800;color:var(--emerald);margin:20px 0 12px;padding-right:12px;border-right:4px solid var(--gold)">👨‍👩‍👧 إشراك العائلة</h3>
       <div class="safety-tip-card"><div class="safety-tip-number">✓</div><div class="safety-tip-content"><h4>أخبر ولي أمرك</h4><p>أخبر والدك أو ولي أمرك عن الشخص.</p></div></div>
       <div class="safety-tip-card"><div class="safety-tip-number">✓</div><div class="safety-tip-content"><h4>لقاء عائلي رسمي</h4><p>رتّب لقاءً بين العائلتين في مكان عام.</p></div></div>
       <div class="safety-tip-card"><div class="safety-tip-number">✓</div><div class="safety-tip-content"><h4>التحقق من المعلومات</h4><p>تأكد من المعلومات الأساسية عبر العائلة.</p></div></div>
@@ -843,8 +863,8 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
       <div class="safety-tip-card"><div class="safety-tip-number" style="background:var(--success)">✓</div><div class="safety-tip-content"><h4>فريدة لكل حساب</h4><p>لا تستخدم نفس كلمة المرور في مواقع مختلفة.</p></div></div>
       <h3 style="font-size:18px;font-weight:800;color:var(--emerald);margin:20px 0 12px;padding-right:12px;border-right:4px solid var(--gold)">❌ أخطاء شائعة</h3>
       <div class="safety-tip-card" style="border-color:var(--error)"><div class="safety-tip-number" style="background:var(--error)">✗</div><div class="safety-tip-content"><h4>استخدام معلومات شخصية</h4><p>لا تستخدم اسمك أو تاريخ ميلادك.</p></div></div>
-      <div class="safety-tip-card" style="border-color:var(--error)"><div class="safety-tip-number" style="background:var(--error)"></div><div class="safety-tip-content"><h4>كلمات مرور بسيطة</h4><p>تجنب 123456 أو password.</p></div></div>
-      <div class="safety-tip-card" style="border-color:var(--error)"><div class="safety-tip-number" style="background:var(--error)"></div><div class="safety-tip-content"><h4>مشاركة كلمة المرور</h4><p>لا تشارك كلمة مرورك مع أي شخص.</p></div></div>
+      <div class="safety-tip-card" style="border-color:var(--error)"><div class="safety-tip-number" style="background:var(--error)">✗</div><div class="safety-tip-content"><h4>كلمات مرور بسيطة</h4><p>تجنب 123456 أو password.</p></div></div>
+      <div class="safety-tip-card" style="border-color:var(--error)"><div class="safety-tip-number" style="background:var(--error)">✗</div><div class="safety-tip-content"><h4>مشاركة كلمة المرور</h4><p>لا تشارك كلمة مرورك مع أي شخص.</p></div></div>
     </div>
   </div>
 </div>
@@ -931,7 +951,7 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
   <div class="modal">
     <div class="modal-handle"></div>
     <div class="modal-header">
-      <h2> تسجيل دخول المسؤول</h2>
+      <h2>🔐 تسجيل دخول المسؤول</h2>
       <button class="modal-close" onclick="closeModal('adminLoginModal')">✕</button>
     </div>
     <div class="modal-body">
@@ -948,7 +968,7 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
         <input class="pay-input" id="adminPassword" type="password" placeholder="أدخل كلمة المرور">
       </div>
       <div id="loginError" style="display:none;background:rgba(198,40,40,0.1);border:1px solid var(--error);color:var(--error);padding:10px;border-radius:14px;font-size:13px;margin-bottom:16px;text-align:center">
-         اسم المستخدم أو كلمة المرور غير صحيحة
+        ❌ اسم المستخدم أو كلمة المرور غير صحيحة
       </div>
     </div>
     <div class="modal-footer">
@@ -963,10 +983,10 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
     <div class="modal-handle"></div>
     <div class="modal-header"><h2>تأكيد الاشتراك</h2><button class="modal-close" onclick="closeModal('paymentModal')">✕</button></div>
     <div class="modal-body">
-      <div class="trial-badge"><h3> تجربة مجانية 7 أيام</h3><p>جميع المزايا المميزة مجاناً</p></div>
+      <div class="trial-badge"><h3>🎁 تجربة مجانية 7 أيام</h3><p>جميع المزايا المميزة مجاناً</p></div>
       <h4 style="font-size:16px;font-weight:800;color:var(--emerald);margin-bottom:12px">اختر طريقة الدفع</h4>
       <div class="pay-method selected" onclick="selectPayMethod(this,'card')"><div class="pay-method-icon">💳</div><div class="pay-method-info"><h4>بطاقة ائتمان / خصم</h4><p>Visa, Mastercard, Amex</p></div><div class="pay-radio"></div></div>
-      <div class="pay-method" onclick="selectPayMethod(this,'paypal')"><div class="pay-method-icon">️</div><div class="pay-method-info"><h4>PayPal</h4><p>دفع آمن عبر PayPal</p></div><div class="pay-radio"></div></div>
+      <div class="pay-method" onclick="selectPayMethod(this,'paypal')"><div class="pay-method-icon">🅿️</div><div class="pay-method-info"><h4>PayPal</h4><p>دفع آمن عبر PayPal</p></div><div class="pay-radio"></div></div>
       <div class="pay-method" onclick="selectPayMethod(this,'apple')"><div class="pay-method-icon">🍎</div><div class="pay-method-info"><h4>Apple Pay</h4><p>دفع سريع عبر Apple</p></div><div class="pay-radio"></div></div>
       <div class="pay-method" onclick="selectPayMethod(this,'google')"><div class="pay-method-icon">📱</div><div class="pay-method-info"><h4>Google Pay</h4><p>دفع عبر Google</p></div><div class="pay-radio"></div></div>
       <div class="price-box" style="margin-top:20px"><div class="price-row"><span>التجربة المجانية (7 أيام)</span><span style="color:var(--success);font-weight:700">0€</span></div><div class="price-row"><span>بعد الفترة المجانية</span><span style="font-weight:700">25€ / شهرياً</span></div><div class="price-row total"><span>المبلغ اليوم</span><span>0€</span></div></div>
@@ -1020,7 +1040,7 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
 <div class="modal-overlay" id="googleModal">
   <div class="modal">
     <div class="modal-handle"></div>
-    <div class="modal-header"><h2> Google Pay</h2><button class="modal-close" onclick="closeModal('googleModal')">✕</button></div>
+    <div class="modal-header"><h2>📱 Google Pay</h2><button class="modal-close" onclick="closeModal('googleModal')">✕</button></div>
     <div class="modal-body">
       <div style="text-align:center;padding:20px 0"><div style="font-size:64px;margin-bottom:16px">📱</div><h3 style="font-size:18px;font-weight:800;color:var(--emerald);margin-bottom:8px">الدفع عبر Google Pay</h3><p style="font-size:14px;color:var(--text-sec);line-height:1.7">سيتم فتح Google Pay.</p></div>
       <div class="secure-badge">🔒 الدفع مشفر ومحمي.</div>
@@ -1061,7 +1081,7 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
       </div>
     </div>
     <div class="admin-section">
-      <div class="admin-section-title"> إدارة المستخدمين</div>
+      <div class="admin-section-title">👥 إدارة المستخدمين</div>
       <table class="admin-table">
         <thead><tr><th>المستخدم</th><th>المستوى</th><th>الحالة</th><th>الإجراءات</th></tr></thead>
         <tbody>
@@ -1150,15 +1170,9 @@ function toast(msg, type) {
   setTimeout(() => { t.classList.remove('show'); }, 3000);
 }
 
-function openModal(id) {
-  document.getElementById(id).classList.add('active');
-}
-
+function openModal(id) { document.getElementById(id).classList.add('active'); }
 function openPaymentModal() { openModal('paymentModal'); }
-
-function closeModal(id) {
-  document.getElementById(id).classList.remove('active');
-}
+function closeModal(id) { document.getElementById(id).classList.remove('active'); }
 
 function selectPayMethod(el, method) {
   document.querySelectorAll('.pay-method').forEach(m => m.classList.remove('selected'));
